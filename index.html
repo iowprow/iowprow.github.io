@@ -195,15 +195,16 @@
 		};	
 	}
 	
-	var parishes = new L.geoJson.ajax("data/parishes/parishes.geojson", {
+	var p = L.geoJson(null, {
 		style: function(feature) {
-			return { color: "orangered", weight: 3 };
-		}
+			return { color: "orangered", weight: 3 };				
+		}	
+	});
+	$.getJSON('data/"data/parishes/parishes.geojson', function(j) {
+		p.addData(j);
 	}).addTo(map);
-	
-	
  
-	 var panelLayers = new L.Control.PanelLayers(baseLayers, overLayers, {
+	var panelLayers = new L.Control.PanelLayers(baseLayers, overLayers, {
 		compact: true,
 		//groupCheckboxes: true,
 		collapsibleGroups: true,

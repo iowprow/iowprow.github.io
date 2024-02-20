@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "CS",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Name": "CS|36", "description": null, "timestamp": null, "begin": null, "end": null, "altitudeMode": null, "tessellate": -1, "extrude": 0, "visibility": -1, "drawOrder": null, "icon": null, "COUNCIL": "IW", "UNIQUE": "2032", "PARISH": "CS", "ROUTENO": "36", "ROW_TYPE": "Bridleway", "INFO": "76", "DISTANCE": "0.047", "FIRSTLON": "-1.33000", "FIRSTLAT": "50.75646", "LASTLON": "-1.33041", "LASTLAT": "50.75709", "FIRSTEN": "447356,95421", "LASTEN": "447326,95490", "BBOX": "50.75709,50.75646,-1.33000,-1.33041" }, "geometry": { "type": "LineString", "coordinates": [ [ -1.33, 50.75646 ], [ -1.33041, 50.75709 ] ] } }
+]
+}

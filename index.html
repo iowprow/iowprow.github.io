@@ -133,7 +133,8 @@
 	for (var layer in geojsonLayers) {
 		var parishName = [geojsonLayers[layer].parish][0];	
 		var parishLC = parishName.toLowerCase();
-		var parishCode = [geojsonLayers[layer].code][0].toLowerCase();	
+		//var parishCode = [geojsonLayers[layer].code][0].toLowerCase();	
+		var parishCode = [geojsonLayers[layer].code][0];	
 		++count;
 		overLayers.push(
 				overlaysTreeGroups[count-1] = {

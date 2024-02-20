@@ -34,44 +34,11 @@
 			color: orange;
 		}		
 	
-		* {
-		box-sizing: border-box;
-		}
-
-		/* Create two unequal columns that floats next to each other */
-		.column {
-		float: left;
-		padding: 10px;
-		height: 300px; /* Should be removed. Only for demonstration */
-		}
-
-		.left {
-		width: 25%;
-		}
-
-		.right {
-		width: 75%;
-		}
-
-		/* Clear floats after the columns */
-		.row:after {
-		content: "";
-		display: table;
-		clear: both;
-		}
     </style>
 	<body>
 	<h4>Isle of Wight Public Rights of Way - Ramblers Path Managers</h4>
-	<div class="row">
-		<div class="column left" style="background-color:#aaa;">
-		  <h2>Column 1</h2>
-		  <p>Some text..</p>
-		</div>
-		<div class="column right" style="background-color:#bbb;">
-			<div id="map"></div>
-		</div>
-	</div>
-
+    <div id="example"> <!--Here the layer control menu will be added--></div>    
+	<div id="map"></div>
 	<script>
 	var foStyle = {
 		color: "red",

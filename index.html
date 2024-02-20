@@ -194,14 +194,14 @@
 		};	
 	}
 	
-	var parishes = L.geoJson(null, {
-		style: function(feature) {
-			return { color: "orangered", weight: 3 };				
-		}	
-	});
-	$.getJSON('data/"data/parishes/parishes.geojson', function(j) {
-		parishes.addData(j);
-	});
+//	var parishes = L.geoJson(null, {
+//		style: function(feature) {
+//			return { color: "orangered", weight: 3 };				
+//		}	
+//	});
+//	$.getJSON('data/"data/parishes/parishes.geojson', function(j) {
+//		parishes.addData(j);
+//	});
  
 	var panelLayers = new L.Control.PanelLayers(baseLayers, overLayers, {
 		compact: true,

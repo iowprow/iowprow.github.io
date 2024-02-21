@@ -53,16 +53,14 @@
 		weight: 2
 	};
 
-	var geojsonMarkerOptions = {
-		radius: 1,
-		opacity: 0,
-		fillColor: "#ff7800",
-		color: "#000",
+	var parishStyle = {
+		color: "orangered"
 	};
 	var center = [50.65, -1.30];	
 	const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		minZoom: 10,
 		maxZoom: 19,
+		prowLayerId: "osm",
 		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	});
 	const openTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
@@ -193,16 +191,27 @@
 			overLayers[count-1].layers = groupLayers;
 		};	
 	}
-	
-	var parishes = L.geoJson(null, {
-		style: function(feature) {
-			return { color: "orangered", weight: 3 };				
-		}	
-	});
-	$.getJSON('/data/parishes/parishes.geojson', function(data) {
-		parishes.addData(data).addTo(map);
-	});
- 
+// put parishes at beginning of list
+/*	overLayers.unshift(
+			overlaysTreeGroups[count-1] = {
+			name: "Parish Boundaries",
+			collapsed: true,
+			active: false,
+			layer: (function() {
+					var p = L.geoJson(null, {
+						style: function(feature) {
+							return { color: "orangered", weight: 3 };					
+						},			
+					});
+					$.getJSON('data/parishes/parishes.geojson', function(j) {
+						p.addData(j);
+					});
+					return p;
+				}())
+			
+		}
+	);
+*/ 
 	var panelLayers = new L.Control.PanelLayers(baseLayers, overLayers, {
 		compact: true,
 		//groupCheckboxes: true,
@@ -210,9 +219,31 @@
 		selectorGroup: true,
 	});
 
-	panelLayers.addOverlay(parishes);
+		$.getJSON('/data/parishes/parishes.geojson', function(data){
+			panelLayers.addOverlay({
+				name: "Parishes",
+				active: true,
+				layer: L.geoJson(data,{
+					style: parishStyle
+				})
+			});
+		});
 
 	map.addControl(panelLayers);
+	
+	map.on('layeradd', function(e) {
+		if(e.layer.options.prowLayerId=='osm') {
+		console.log('Layer added: ', e.layer.options.prowLayerId);
+		}
+	//	console.log("layerstamp");
+	//	console.log(L.stamp(e.layer));
+		//if(L.stamp(e.layer) === L.stamp('2689')) {
+			//$.getJSON('data/river.json', function(data) {
+			//	river.addData( data );
+			//});
+		//}
+	 });
+
 	
  	// add print button
 	var browserControl = L.control.browserPrint({position: 'topleft', printModes: ["Auto","Portrait","Landscape"], title: 'Print ...'}).addTo(map);

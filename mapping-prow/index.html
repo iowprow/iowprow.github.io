@@ -126,7 +126,7 @@
 	var overLayers = [];
 	var overlaysTreeGroups = {};
 	var layerGroupLayers = [];
-	var layerGroupLayer = {};
+	//var layerGroupLayer = {};
 	var styleLabel;
 	var count=0;
 	// for every parish in geojson layers make an overlay group
@@ -203,14 +203,14 @@
 		parishes.addData(data).addTo(map);
 	});
  
-	//overLayers.push(parishes);
-
 	var panelLayers = new L.Control.PanelLayers(baseLayers, overLayers, {
 		compact: true,
 		//groupCheckboxes: true,
 		collapsibleGroups: true,
 		selectorGroup: true,
 	});
+
+	panelLayers.addOverlay(parishes);
 
 	map.addControl(panelLayers);
 	

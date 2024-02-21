@@ -119,14 +119,18 @@
 		},
 	];
 	
+	var parishes = new L.geoJson.ajax("/data/parishes/parishes.geojson", {
+		style: function(feature) {
+			return { color: "orangered", weight: 3 };
+		}
+	}).addTo(map);		
+	
 	var overlaysTree = {
-		label: 'IOW PROW',
-		selectAllCheckbox: true,
-		children: [
-			{
-				label: 'Parish Boundaries',
-				layer: parishes,
-			}
+	label: 'IOW PROW',
+	selectAllCheckbox: true,
+	children: [
+		{label: 'Parish Boundaries', layer: parishes,},
+		{label: '<div id="onlysel">-Show only selected-</div>'},
 		]
 	}
 
@@ -155,11 +159,7 @@
 			}		
 		}			
 	}
-	var parishes = new L.geoJson.ajax("/data/parishes/parishes.geojson", {
-		style: function(feature) {
-			return { color: "orangered", weight: 3 };
-		}
-	}).addTo(map);
+
 	
 	var lay = L.control.layers.tree(baseTree, overlaysTree, {
 		position:'topleft',

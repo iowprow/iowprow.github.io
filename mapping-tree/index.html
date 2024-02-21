@@ -82,7 +82,7 @@
 			//var parishCode = [geojsonLayers[layer].code][0].toLowerCase();	
 			var parishCode = [geojsonLayers[layer].code][0];	
 			var fileName = parishCode+"_"+`${key}`;
-			var dataPath = 	"/mapping-tree/data/"+parishLC+"/"+fileName+".geojson";				
+			var dataPath = 	"/data/"+parishLC+"/"+fileName+".geojson";				
 			var layerName = parishLC+"_"+`${key}`;
 			
 			iowProwLayers[layerName] = new L.geoJson.ajax(dataPath,{
@@ -155,7 +155,7 @@
 			}		
 		}			
 	}
-	var parishes = new L.geoJson.ajax("/mapping-tree/data/parishes/parishes.geojson", {
+	var parishes = new L.geoJson.ajax("/data/parishes/parishes.geojson", {
 		style: function(feature) {
 			return { color: "orangered", weight: 3 };
 		}

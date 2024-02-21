@@ -7,10 +7,10 @@
     <title>Isle of Wight Public Rights of Way - Ramblers Path Managers</title>
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script></head>
-	<script src="/mapping-prow/js/leaflet.browser.print.min.js"></script>
+	<script src="/js/leaflet.browser.print.min.js"></script>
 	<script src="//unpkg.com/jquery@3.4.1/dist/jquery.js"></script>
-	<link rel="stylesheet" href="/mapping-prow/js/leaflet-panel-layers.src.css" crossorigin=""/>
-    <script src="/mapping-prow/js/leaflet-panel-layers.min.js"></script>
+	<link rel="stylesheet" href="/js/leaflet-panel-layers.src.css" crossorigin=""/>
+    <script src="/js/leaflet-panel-layers.min.js"></script>
 	<style>
         body { margin: 0; padding: 0; }
         html, body, #map { height: 100%; width: 100vw; }
@@ -92,7 +92,7 @@
 	];
 	
 	
-	map.attributionControl.setPrefix('PROW Data provided by the Isle of Wight Council')
+	map.attributionControl.setPrefix('PROW Data courtesy of the Isle of Wight Council')
 	map.getPane('tooltipPane').style.display = 'none';
 	var geojsonLayers = {
 		 a: {code:"A", parish:'Arreton'}, 
@@ -133,7 +133,6 @@
 	for (var layer in geojsonLayers) {
 		var parishName = [geojsonLayers[layer].parish][0];	
 		var parishLC = parishName.toLowerCase();
-		//var parishCode = [geojsonLayers[layer].code][0].toLowerCase();	
 		var parishCode = [geojsonLayers[layer].code][0];	
 		++count;
 		overLayers.push(
@@ -184,7 +183,7 @@
 						}
 					
 					});
-					$.getJSON('/mapping-prow/data/'+parishLC+'/'+parishCode+'_'+rowType+'.geojson', function(j) {
+					$.getJSON('/data/'+parishLC+'/'+parishCode+'_'+rowType+'.geojson', function(j) {
 						l.addData(j);
 					});
 					return l;
@@ -200,7 +199,7 @@
 //			return { color: "orangered", weight: 3 };				
 //		}	
 //	});
-//	$.getJSON('data/"data/parishes/parishes.geojson', function(j) {
+//	$.getJSON('data/parishes/parishes.geojson', function(j) {
 //		parishes.addData(j);
 //	});
  

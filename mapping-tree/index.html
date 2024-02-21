@@ -7,10 +7,10 @@
     <title>Isle of Wight Public Rights of Way - Ramblers Path Managers</title>
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script></head>
-	<script src="/mapping-test/js/leaflet.ajax.min.js"></script>
-	<script src="/mapping-test/js/leaflet.browser.print.min.js"></script>
-	<link rel="stylesheet" href="/mapping-test/js/L.Control.Layers.Tree.css" crossorigin=""/>
-    <script src="/mapping-test/js/L.Control.Layers.Tree.js"></script>
+	<script src="/mapping-tree/js/leaflet.ajax.min.js"></script>
+	<script src="/mapping-tree/js/leaflet.browser.print.min.js"></script>
+	<link rel="stylesheet" href="/mapping-tree/js/L.Control.Layers.Tree.css" crossorigin=""/>
+    <script src="/mapping-tree/js/L.Control.Layers.Tree.js"></script>
 	<style>
         body { margin: 0; padding: 0; }
         html, body, #map { height: 100%; width: 100vw; }
@@ -82,7 +82,7 @@
 			//var parishCode = [geojsonLayers[layer].code][0].toLowerCase();	
 			var parishCode = [geojsonLayers[layer].code][0];	
 			var fileName = parishCode+"_"+`${key}`;
-			var dataPath = 	"/mapping-test/data/"+parishLC+"/"+fileName+".geojson";				
+			var dataPath = 	"/mapping-tree/data/"+parishLC+"/"+fileName+".geojson";				
 			var layerName = parishLC+"_"+`${key}`;
 			
 			iowProwLayers[layerName] = new L.geoJson.ajax(dataPath,{

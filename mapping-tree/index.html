@@ -79,7 +79,8 @@
 	Object.keys(prowType).forEach(key => {		
 		for(var layer in geojsonLayers) {     
 			var parishLC = [geojsonLayers[layer].parish][0].toLowerCase();
-			var parishCode = [geojsonLayers[layer].code][0].toLowerCase();	
+			//var parishCode = [geojsonLayers[layer].code][0].toLowerCase();	
+			var parishCode = [geojsonLayers[layer].code][0];	
 			var fileName = parishCode+"_"+`${key}`;
 			var dataPath = 	"/mapping-test/data/"+parishLC+"/"+fileName+".geojson";				
 			var layerName = parishLC+"_"+`${key}`;

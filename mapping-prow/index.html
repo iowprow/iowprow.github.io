@@ -203,6 +203,8 @@
 		parishes.addData(data).addTo(map);
 	});
  
+	overLayers.push(parishes);
+	
 	var panelLayers = new L.Control.PanelLayers(baseLayers, overLayers, {
 		compact: true,
 		//groupCheckboxes: true,

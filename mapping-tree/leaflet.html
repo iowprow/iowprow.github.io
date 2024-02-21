@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- For mobile browsers -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Isle of Wight Public Rights of Way - Ramblers Path Managers</title>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script></head>
+	<script src="js/leaflet.ajax.min.js"></script>
+	<script src="js/leaflet.browser.print.min.js"></script>
+	<link rel="stylesheet" href="js/L.Control.Layers.Tree.css" crossorigin=""/>
+    <script src="js/L.Control.Layers.Tree.js"></script>
+	<style>
+        body { margin: 0; padding: 0; }
+        html, body, #map { height: 100%; width: 100vw; }
+		.layer-item { color: black }
+		.layer-item-missing { color: red }
+		.leaflet-tooltip.tooltipStyle {
+		  background: mistyrose;
+		  border: 1px silver;;
+		  padding: 0px 1px 0px 1px;
+		}		
+    </style>
+	<body>
+	<h4>Isle of Wight Public Rights of Way - Ramblers Path Managers</h4>
+    <div id="example"> <!--Here the layer control menu will be added--></div>    
+	<div id="map"></div>
+	<script>
+	var center = [50.65, -1.30];	
+	const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		minZoom: 10,
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	});
+	const openTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+		minZoom: 10,
+		maxZoom: 19,
+		attribution: ' &copy; <a href="https://opentopomap.org">OpenTopoMap</a>)'
+	});
+	const map = L.map('map', {
+		center: center,
+		zoom: 11,
+		layers: [osm]
+	});	
+	map.attributionControl.setPrefix('PROW Data provided by the Isle of Wight Council')
+	map.getPane('tooltipPane').style.display = 'none';
+	var geojsonLayers = {
+		 a: {code:"A", parish:'Arreton'}, 
+		bb: {code:"BB", parish:'Bembridge'}, 
+		 b: {code:"B", parish:'Brading'}, 
+		bs: {code:"BS", parish:'Brighstone'}, 
+		cb: {code:"CB", parish:'Calbourne'}, 
+		 c: {code:"C", parish:'Chale'}, 
+		cs: {code:"CS", parish:'Cowes'}, 
+	  	 f: {code:"F", parish:'Freshwater'}, 
+		 g: {code:"G", parish:'Gatcombe'}, 
+		gl: {code:"GL", parish:'Godshill'}, 
+		nc: {code:"NC", parish:'Newchurch'}, 
+		 n: {code:"N", parish:'Newport'}, 
+		nt: {code:"NT", parish:'Niton'}, 
+		 r: {code:"R", parish:'Ryde'}, 
+		ss: {code:"SS", parish:'Sandown'}, 
+		 s: {code:"S", parish:'Shalfleet'}, 
+		sw: {code:"SW", parish:'Shorwell'}, 
+		 t: {code:"T", parish:'Totland'}, 
+		 v: {code:"V", parish:'Ventnor'},
+		 y: {code:"Y", parish:'Yarmouth'}
+	};	
+	var prowType =  {
+		'br':'Bridleway', 
+		'bo':'Byway', 
+		'fo':'Footpath'
+	};			
+	var iowProwLayers = {};	  
+	var labelLayers = {};	  
+	
+	// create a layer for each for each right of way type in each parish
+	Object.keys(prowType).forEach(key => {		
+		for(var layer in geojsonLayers) {     
+			var parishLC = [geojsonLayers[layer].parish][0].toLowerCase();
+			var parishCode = [geojsonLayers[layer].code][0].toLowerCase();	
+			var fileName = parishCode+"_"+`${key}`;
+			var dataPath = 	"data/"+parishLC+"/"+fileName+".geojson";				
+			var layerName = parishLC+"_"+`${key}`;
+			
+			iowProwLayers[layerName] = new L.geoJson.ajax(dataPath,{
+				style: function(feature) {
+					switch(feature.properties.ROW_TYPE) {
+						case 'BOAT': return { color: "orange", weight: 2 };
+						case 'Bridleway': return { color: "blue", weight: 2 };
+						case 'Footpath': return { color: "red", weight: 2 };
+					}					
+				},
+				onEachFeature: function(feature, layer) {
+					if (feature.properties && feature.properties.Name) {
+						var tooltipname = feature.properties.Name.replace('|','');
+						layer.bindTooltip(tooltipname, {
+							direction: "center",
+							permanent: true, 
+							opacity: 0.9,
+							className: 'tooltipStyle'
+						});
+					}				
+				}
+			});			
+		}
+	})
+	
+	// The tree containing the base layers
+	var baseTree = [
+		{
+			label: 'BaseMaps',
+			children: [
+				{label: 'OSM', layer: osm, name: 'OpenStreeMap'},
+				{label: 'OpenTopoMap', layer: openTopoMap, name: 'Topographic - OSM'},
+			]
+		},
+	];
+	
+	var overlaysTree = {
+		label: 'IOW PROW',
+		selectAllCheckbox: true,
+		children: [
+			{
+				label: 'Parish Boundaries',
+				layer: parishes,
+			}
+		]
+	}
+
+	var groupChildren = {};
+	let count = 0;	
+	// start the tree one parent for each parish
+	for (var layer in geojsonLayers) {
+		var parishName = [geojsonLayers[layer].parish][0];	
+		++count;
+		groupChildren[parishName] = {
+			label: parishName,
+			selectAllCheckbox: true,
+			children: []
+		}
+		overlaysTree.children[count] = groupChildren[parishName];
+	}
+	for (var parishshow in groupChildren) {	
+		parishtest= parishshow.toLowerCase();
+		for (var layerName in iowProwLayers) {
+			if (layerName == parishtest+"_br") {
+				groupChildren[parishshow].children[0] = {label: "Bridleways", layer: iowProwLayers[layerName]};
+			} else if (layerName == parishtest+"_fo") {
+				groupChildren[parishshow].children[1] = {label: "Footpaths", layer: iowProwLayers[layerName]};
+			} else if (layerName == parishtest+"_bo") {
+				groupChildren[parishshow].children[2] = {label: "Byways", layer: iowProwLayers[layerName]};
+			}		
+		}			
+	}
+	var parishes = new L.geoJson.ajax("data/parishes/parishes.geojson", {
+		style: function(feature) {
+			return { color: "orangered", weight: 3 };
+		}
+	}).addTo(map);
+	
+	var lay = L.control.layers.tree(baseTree, overlaysTree, {
+		position:'topleft',
+		namedToggle: false,
+		selectorBack: false,
+		//closedSymbol: '&#8862; &#x1f5c0;',
+		//openedSymbol: '&#8863; &#x1f5c1;',
+		collapseAll: 'Collapse',
+		expandAll: 'Expand',
+		collapsed: false,
+		labelIsSelector: 'both',
+    });
+	
+    lay.addTo(map).collapseTree().expandSelected().collapseTree(true);
+	
+ 	// add print button
+	var browserControl = L.control.browserPrint({position: 'topleft', printModes: ["Auto","Portrait","Landscape"], title: 'Print ...'}).addTo(map);
+	
+	// Zoom to your location
+	map.locate({setView: true, maxZoom: 16});
+	
+	//https://bookdown.org/sammigachuhi/book-leaflet/mobile-friendly-webapps.html
+	// Add marker at your location
+	function onLocationFound(e) {
+		var radius = e.accuracy;
+		L.marker(e.latlng).addTo(map)
+			.bindPopup("You are within " + Number((radius/1000).toFixed(2)) + " kilometers from this point").openPopup();
+		L.circle(e.latlng, radius).addTo(map);
+	}
+	map.on('locationfound', onLocationFound);
+	
+	var lastZoom;
+	var tooltipThreshold = 14;
+	map.on('zoomend', function() {
+		var zoom = map.getZoom();
+		if (zoom < tooltipThreshold && (!lastZoom || lastZoom >= tooltipThreshold)) {
+			map.getPane('tooltipPane').style.display = 'none';
+		} else if (zoom >= tooltipThreshold && (!lastZoom || lastZoom < tooltipThreshold)) { 
+			map.getPane('tooltipPane').style.display = 'block';
+		}
+		lastZoom = zoom;
+	})
+</script>
+</body>
+</html>

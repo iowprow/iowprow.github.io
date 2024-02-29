@@ -18,24 +18,21 @@
 	<script src="../js/leaflet.ajax.min.js"></script>
 	<script src="../js/prow.js"></script>
 	<link rel="stylesheet" href="../css/style.css"/>
+	<style>
+        body { margin: 0; padding: 0; }
+        html, body, #map { height: 100%; width: 100vw; }
+		.layer-item { color: black }
+		.layer-item-missing { color: red }
+		.leaflet-tooltip.tooltipStyle {
+		  background: mistyrose;
+		  border: 1px silver;;
+		  padding: 0px 1px 0px 1px;
+		}		
+    </style>
 	</head>
 	<body>
-		<h2 class="heading">Isle of Wight Public Rights of Way - Ramblers Path Managers</h2> 
+	<h2 class="heading">Isle of Wight Public Rights of Way - Ramblers Path Managers</h2> 
     <div id="map"> </div> 
-    <div class="button-group flex-style"> 
-        <div class="component1"> 
-            <button class="map-zoom-out-btn">Back to start</button> 
-        </div> 
-        <div class="component2"> 
-			<div class="ui-widget"  style="text-align:left;">
-				<input class="select-dropdown" id="autocomplete" placeholder="Search for: Path">
-				<input type="hidden" id="autocomplete-id">
-				<button class="clear-search-btn"> Clear Search </button> 
-			</div>  
-        </div> 
-    </div> 	
-    <footer class="footer flex-style">&#169; IOWPROW 2024 </footer> 	
-
 	<script>
 	// change this depending on the root data directory
 	var center = [50.675, -1.31];	
@@ -43,7 +40,7 @@
 	var lastZoom;
 	var tooltipThreshold = 14;
 	var dataPath = "../data/";
-	
+
 	const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		minZoom: 0,
 		maxZoom: 19,
@@ -100,79 +97,14 @@
 	];	
 	
 	
-	
-	 function main(layerName, url, label) {		
-	 
+    function main(layerName, url, label) {
 		iowProwLayers[layerName] = new L.geoJson.ajax(url,{
 			style: lineStyle, 
-			onEachFeature: forEachFeature2
-		});		
-		
-		//iowProwLayers[layerName].on('data:loaded', function() { 
-		//	iowProwLayers[layerName].addTo(map);   
-		//});
-  
-    }	
-
-	addDataToAutocomplete(arr1);
-
-	function addDataToAutocomplete(arr) {
-		
-		arr.sort(function(a, b){ // sort object by Name/label
-            var nameA=a.label, nameB=b.label
-            if (nameA < nameB) //sort string ascending
-                return -1 
-            if (nameA > nameB)
-                return 1
-            return 0 //default return value (no sorting)
-        })	
-		
-		$( "#autocomplete" ).autocomplete({
-			source: arr,
-			focus: function( event, ui ) {
-				$( "#autocomplete" ).val( ui.item.label );
-				return false;
-			},
-			select: function( event, ui ) {
-				$( "#autocomplete" ).val( ui.item.label );
-				$( "#autocomplete-id" ).val( ui.item.value );
-				return false;
-			}
-		}); 
-		
-		$( "#autocomplete" ).on( "autocompleteselect", function( event, ui ) {
-			pathSelect(ui.item.label, ui.item.value);  
-			ui.item.value = ui.item.value;
+			onEachFeature: forEachFeature 
 		});
-	}
-
-	var fg = L.featureGroup().addTo(map)
-  	function pathSelect(label, value){
-		if(value!="") {
-			var optionSelected = value.split(',');	
-			lon = optionSelected[1];
-			lat = optionSelected[0];
-			layerName = optionSelected[2];
-			fg.clearLayers();			
-			var markerCircle = L.circle([lon,lat], {
-				radius: 300,
-				fillColor: 'steelblue',
-				fillOpacity: 0.4,
-				weight: 0,
-			}).addTo(fg);
-			
-			iowProwLayers[layerName].addTo(fg);
-			
-			
-			map.flyTo([optionSelected[1], optionSelected[0]], 15 ); 
-		} 
-
-	//	map._layers[a].fire('click');  // 'clicks' on state name from search
-	//	var layer = map._layers[a];
-	//	map.fitBounds(layer.getBounds());  // zooms to selected poly
-        }
-// END...fire off click event and zoom to polygon
-
+    }	
+	
+	
 	var groupChildren = {};
 	var overlaysTree = {
 		label: 'IOW PROW',
@@ -228,19 +160,6 @@
 	// add print button
 	var browserControl = L.control.browserPrint({position: 'topleft', printModes: ["Auto","Portrait","Landscape"], title: 'Print ...'}).addTo(map);
 	
-	
-	document.querySelector(".map-zoom-out-btn").addEventListener("click", () => { 
-		fg.clearLayers();		
-		document.getElementById('autocomplete').value = '';
-		map.flyTo(center, startZoom); 
-	}); 
- 
-	document.querySelector(".clear-search-btn").addEventListener("click", () => { 
-		fg.clearLayers();		
-		document.getElementById('autocomplete').value = '';
-	}); 	
-	
-	
 	// Zoom to your location
 	map.locate({setView: true, maxZoom: 16});
 	
@@ -266,7 +185,7 @@
 		lastZoom = zoom;
 	})
 	
-       L.control.scale({position: 'topright', imperial: false}).addTo(map);
+	
 </script>
 </body>
 </html>

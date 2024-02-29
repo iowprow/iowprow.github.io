@@ -37,10 +37,6 @@
 		}
 	}	
 	
-	var uniqueLayernames=[];	
-	var arr = [];
-	var arr1 = [];
-
 	function forEachFeature2(feature, layer) {		
 		layer.on({
 			mouseover: highlightFeature,

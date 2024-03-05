@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 3.8.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata>
+<bounds minlat="50.671070000000000" minlon="-1.500080000000000" maxlat="50.706730000000000" maxlon="-1.466490000000000"/>                                       
+</metadata>
+<wpt lat="50.70445" lon="-1.49039">
+  <name>Y19</name>
+  <cmt>Y</cmt>
+  <desc>Bridleway from 50.70291,-1.49480 to 50.70469,-1.48577 OR from SZ357937 to SZ364957 - it is 0.426M or 0.686K long</desc>
+</wpt>
+<wpt lat="50.67107" lon="-1.46987">
+  <name>Y13</name>
+  <cmt>Y</cmt>
+  <desc>Bridleway from 50.67193,-1.47609 to 50.67052,-1.46319 OR from SZ371593 to SZ380578 - it is 0.58M or 0.933K long</desc>
+</wpt>
+<wpt lat="50.69922" lon="-1.49733">
+  <name>Y19</name>
+  <cmt>Y</cmt>
+  <desc>Bridleway from 50.69814,-1.49763 to 50.70066,-1.49655 OR from SZ355884 to SZ356912 - it is 0.181M or 0.292K long</desc>
+</wpt>
+<wpt lat="50.70159" lon="-1.49607">
+  <name>Y19</name>
+  <cmt>Y</cmt>
+  <desc>Bridleway from 50.70066,-1.49655 to 50.70265,-1.49517 OR from SZ356912 to SZ357934 - it is 0.152M or 0.244K long</desc>
+</wpt>
+<wpt lat="50.70281" lon="-1.49495">
+  <name>Y19</name>
+  <cmt>Y</cmt>
+  <desc>Bridleway from 50.70265,-1.49517 to 50.70291,-1.49480 OR from SZ357934 to SZ357937 - it is 0.024M or 0.039K long</desc>
+</wpt>
+<wpt lat="50.68187" lon="-1.4677">
+  <name>Y9</name>
+  <cmt>Y</cmt>
+  <desc>Footpath from 50.67871,-1.46649 to 50.68430,-1.46855 OR from SZ377669 to SZ376731 - it is 0.399M or 0.643K long</desc>
+</wpt>
+<wpt lat="50.67871" lon="-1.46649">
+  <name>Y10</name>
+  <cmt>Y</cmt>
+  <desc>Footpath from 50.67871,-1.46649 to 50.68047,-1.46318 OR from SZ377669 to SZ380689 - it is 0.189M or 0.305K long</desc>
+</wpt>
+<wpt lat="50.69271" lon="-1.47782">
+  <name>Y1</name>
+  <cmt>Y</cmt>
+  <desc>Footpath from 50.69053,-1.47297 to 50.69545,-1.48282 OR from SZ373800 to SZ366855 - it is 0.557M or 0.896K long</desc>
+</wpt>
+<wpt lat="50.69731" lon="-1.49351">
+  <name>Y1</name>
+  <cmt>Y</cmt>
+  <desc>Footpath from 50.69548,-1.48292 to 50.70066,-1.49655 OR from SZ366855 to SZ356912 - it is 0.836M or 1.345K long</desc>
+</wpt>
+<wpt lat="50.70098" lon="-1.4823">
+  <name>Y4</name>
+  <cmt>Y</cmt>
+  <desc>Footpath from 50.70107,-1.48272 to 50.70065,-1.48141 OR from SZ366917 to SZ367912 - it is 0.069M or 0.11K long</desc>
+</wpt>
+<wpt lat="50.69898" lon="-1.47741">
+  <name>Y5</name>
+  <cmt>Y</cmt>
+  <desc>Footpath from 50.69977,-1.48171 to 50.69858,-1.47460 OR from SZ366903 to SZ372890 - it is 0.329M or 0.53K long</desc>
+</wpt>
+<wpt lat="50.69972" lon="-1.4741">
+  <name>Y6</name>
+  <cmt>Y</cmt>
+  <desc>Footpath from 50.69858,-1.47460 to 50.70066,-1.47093 OR from SZ372890 to SZ374913 - it is 0.251M or 0.403K long</desc>
+</wpt>
+<wpt lat="50.69626" lon="-1.46752">
+  <name>Y8</name>
+  <cmt>Y</cmt>
+  <desc>Footpath from 50.69574,-1.46765 to 50.69676,-1.46685 OR from SZ376859 to SZ377870 - it is 0.082M or 0.132K long</desc>
+</wpt>
+<wpt lat="50.70099" lon="-1.46848">
+  <name>Y8</name>
+  <cmt>Y</cmt>
+  <desc>Footpath from 50.70019,-1.46799 to 50.70132,-1.46989 OR from SZ376908 to SZ375920 - it is 0.146M or 0.235K long</desc>
+</wpt>
+<wpt lat="50.70261" lon="-1.48975">
+  <name>Y2</name>
+  <cmt>Y</cmt>
+  <desc>Footpath from 50.70229,-1.48519 to 50.70291,-1.49480 OR from SZ364930 to SZ357937 - it is 0.513M or 0.826K long</desc>
+</wpt>
+<wpt lat="50.70256" lon="-1.49632">
+  <name>Y2</name>
+  <cmt>Y</cmt>
+  <desc>Footpath from 50.70265,-1.49517 to 50.70221,-1.49668 OR from SZ357934 to SZ356929 - it is 0.088M or 0.141K long</desc>
+</wpt>
+<wpt lat="50.70614" lon="-1.50008">
+  <name>Y18</name>
+  <cmt>Y</cmt>
+  <desc>Footpath from 50.70614,-1.50008 to 50.70581,-1.50003 OR from SZ353973 to SZ354969 - it is 0.023M or 0.037K long</desc>
+</wpt>
+<wpt lat="50.70581" lon="-1.50003">
+  <name>Y17</name>
+  <cmt>Y</cmt>
+  <desc>Footpath from 50.70581,-1.50003 to 50.70584,-1.49958 OR from SZ354969 to SZ354969 - it is 0.02M or 0.032K long</desc>
+</wpt>
+<wpt lat="50.7061" lon="-1.4981">
+  <name>Y14</name>
+  <cmt>Y</cmt>
+  <desc>Footpath from 50.70610,-1.49810 to 50.70673,-1.49837 OR from SZ355972 to SZ355979 - it is 0.045M or 0.073K long</desc>
+</wpt>
+<wpt lat="50.70673" lon="-1.49657">
+  <name>Y15</name>
+  <cmt>Y</cmt>
+  <desc>Footpath from 50.70673,-1.49657 to 50.70635,-1.49644 OR from SZ356979 to SZ356975 - it is 0.027M or 0.043K long</desc>
+</wpt>
+<wpt lat="50.70556" lon="-1.49408">
+  <name>Y12</name>
+  <cmt>Y</cmt>
+  <desc>Footpath from 50.70610,-1.49397 to 50.70554,-1.49465 OR from SZ358972 to SZ357966 - it is 0.07M or 0.113K long</desc>
+</wpt>
+<wpt lat="50.7064" lon="-1.49475">
+  <name>Y16</name>
+  <cmt>Y</cmt>
+  <desc>Footpath from 50.70640,-1.49475 to 50.70674,-1.49470 OR from SZ357976 to SZ357979 - it is 0.024M or 0.038K long</desc>
+</wpt>
+<wpt lat="50.70654" lon="-1.49138">
+  <name>Y11a</name>
+  <cmt>Y</cmt>
+  <desc>Footpath from 50.70674,-1.49470 to 50.70663,-1.48725 OR from SZ357979 to SZ363979 - it is 0.328M or 0.527K long</desc>
+</wpt>
+<wpt lat="50.67695" lon="-1.47436">
+  <name>Y9a</name>
+  <cmt>Y</cmt>
+  <desc>Footpath from 50.67711,-1.47810 to 50.67681,-1.47158 OR from SZ369651 to SZ374648 - it is 0.287M or 0.462K long</desc>
+</wpt>
+<wpt lat="50.70145" lon="-1.49659">
+  <name>Y1</name>
+  <cmt>Y</cmt>
+  <desc>Footpath from 50.70066,-1.49655 to 50.70221,-1.49668 OR from SZ356912 to SZ356929 - it is 0.107M or 0.173K long</desc>
+</wpt>
+<wpt lat="50.70581" lon="-1.50003">
+  <name>Y18</name>
+  <cmt>Y</cmt>
+  <desc>Footpath from 50.70581,-1.50003 to 50.70555,-1.49999 OR from SZ354969 to SZ354966 - it is 0.018M or 0.029K long</desc>
+</wpt>
+<wpt lat="50.70267" lon="-1.49671">
+  <name>Y1</name>
+  <cmt>Y</cmt>
+  <desc>Footpath from 50.70221,-1.49668 to 50.70309,-1.49726 OR from SZ356929 to SZ355939 - it is 0.07M or 0.112K long</desc>
+</wpt>
+<wpt lat="50.69834" lon="-1.47346">
+  <name>Y5</name>
+  <cmt>Y</cmt>
+  <desc>Footpath from 50.69858,-1.47460 to 50.69805,-1.47193 OR from SZ372890 to SZ373884 - it is 0.123M or 0.198K long</desc>
+</wpt>
+<wpt lat="50.67683" lon="-1.47158">
+  <name>Y9</name>
+  <cmt>Y</cmt>
+  <desc>Footpath from 50.67530,-1.47245 to 50.67871,-1.46649 OR from SZ373631 to SZ377669 - it is 0.388M or 0.625K long</desc>
+</wpt>
+</gpx>

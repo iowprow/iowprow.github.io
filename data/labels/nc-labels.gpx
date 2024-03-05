@@ -1,0 +1,646 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 3.8.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata>
+<bounds minlat="50.621499999999997" minlon="-1.227120000000000" maxlat="50.682270000000003" maxlon="-1.177690000000000"/>                                       
+</metadata>
+<wpt lat="50.62483" lon="-1.21203">
+  <name>NC31</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.62263,-1.21195 to 50.62945,-1.21288 OR from SZ558062 to SZ557137 - it is 0.479M or 0.77K long</desc>
+</wpt>
+<wpt lat="50.63327" lon="-1.21279">
+  <name>NC31</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.63030,-1.21312 to 50.63592,-1.21238 OR from SZ557147 to SZ557209 - it is 0.397M or 0.639K long</desc>
+</wpt>
+<wpt lat="50.63774" lon="-1.21169">
+  <name>NC31</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.63603,-1.21232 to 50.63970,-1.21164 OR from SZ557211 to SZ558251 - it is 0.259M or 0.417K long</desc>
+</wpt>
+<wpt lat="50.63599" lon="-1.21234">
+  <name>NC31</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.63592,-1.21238 to 50.63603,-1.21232 OR from SZ557209 to SZ557211 - it is 0.008M or 0.013K long</desc>
+</wpt>
+<wpt lat="50.62595" lon="-1.21595">
+  <name>NC43</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.62337,-1.21506 to 50.62805,-1.21780 OR from SZ556070 to SZ554121 - it is 0.399M or 0.642K long</desc>
+</wpt>
+<wpt lat="50.62718" lon="-1.22712">
+  <name>NC43</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.62721,-1.22671 to 50.62714,-1.22763 OR from SZ547111 to SZ547111 - it is 0.041M or 0.066K long</desc>
+</wpt>
+<wpt lat="50.62704" lon="-1.22349">
+  <name>NC43</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.62641,-1.22244 to 50.62721,-1.22671 OR from SZ550103 to SZ547111 - it is 0.214M or 0.344K long</desc>
+</wpt>
+<wpt lat="50.62263" lon="-1.21195">
+  <name>NC30</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.62263,-1.21195 to 50.62263,-1.21182 OR from SZ558062 to SZ558062 - it is 0.006M or 0.009K long</desc>
+</wpt>
+<wpt lat="50.62679" lon="-1.20787">
+  <name>NC30</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.62263,-1.21182 to 50.62955,-1.20573 OR from SZ558062 to SZ562139 - it is 0.558M or 0.898K long</desc>
+</wpt>
+<wpt lat="50.63972" lon="-1.21167">
+  <name>NC33b</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.63970,-1.21164 to 50.63946,-1.21206 OR from SZ558251 to SZ558249 - it is 0.027M or 0.043K long</desc>
+</wpt>
+<wpt lat="50.6384" lon="-1.21395">
+  <name>NC33b</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.63946,-1.21206 to 50.63727,-1.21557 OR from SZ558249 to SZ555224 - it is 0.216M or 0.348K long</desc>
+</wpt>
+<wpt lat="50.63685" lon="-1.19717">
+  <name>NC37a</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.63537,-1.19749 to 50.63831,-1.19695 OR from SZ568204 to SZ568237 - it is 0.23M or 0.37K long</desc>
+</wpt>
+<wpt lat="50.6422" lon="-1.19856">
+  <name>NC41</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.64198,-1.19667 to 50.64254,-1.20194 OR from SZ568278 to SZ565284 - it is 0.234M or 0.377K long</desc>
+</wpt>
+<wpt lat="50.64271" lon="-1.2039">
+  <name>NC41</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.64254,-1.20194 to 50.64296,-1.20715 OR from SZ565284 to SZ561288 - it is 0.23M or 0.371K long</desc>
+</wpt>
+<wpt lat="50.63167" lon="-1.19811">
+  <name>NC37a</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.62993,-1.19921 to 50.63540,-1.19796 OR from SZ567144 to SZ568205 - it is 0.415M or 0.667K long</desc>
+</wpt>
+<wpt lat="50.6354" lon="-1.1979">
+  <name>NC37a</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.63540,-1.19796 to 50.63537,-1.19749 OR from SZ568205 to SZ568204 - it is 0.021M or 0.033K long</desc>
+</wpt>
+<wpt lat="50.6493" lon="-1.1923">
+  <name>NC20</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.64820,-1.19276 to 50.65153,-1.19359 OR from SZ571347 to SZ571384 - it is 0.26M or 0.419K long</desc>
+</wpt>
+<wpt lat="50.65772" lon="-1.19323">
+  <name>NC20</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.65625,-1.19434 to 50.65898,-1.19162 OR from SZ570437 to SZ572467 - it is 0.232M or 0.373K long</desc>
+</wpt>
+<wpt lat="50.65418" lon="-1.19349">
+  <name>NC20</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.65279,-1.19369 to 50.65625,-1.19434 OR from SZ570398 to SZ570437 - it is 0.254M or 0.408K long</desc>
+</wpt>
+<wpt lat="50.65156" lon="-1.19363">
+  <name>NC20</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.65153,-1.19359 to 50.65157,-1.19363 OR from SZ571384 to SZ571385 - it is 0.003M or 0.005K long</desc>
+</wpt>
+<wpt lat="50.65207" lon="-1.1937">
+  <name>NC20</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.65157,-1.19363 to 50.65279,-1.19369 OR from SZ571385 to SZ570398 - it is 0.085M or 0.136K long</desc>
+</wpt>
+<wpt lat="50.64966" lon="-1.18766">
+  <name>NC23</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.64907,-1.18731 to 50.65048,-1.18763 OR from SZ575358 to SZ575373 - it is 0.101M or 0.162K long</desc>
+</wpt>
+<wpt lat="50.65146" lon="-1.18811">
+  <name>NC23</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.65048,-1.18763 to 50.65364,-1.18983 OR from SZ575373 to SZ573408 - it is 0.251M or 0.403K long</desc>
+</wpt>
+<wpt lat="50.65486" lon="-1.1905">
+  <name>NC23</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.65364,-1.18983 to 50.65620,-1.19079 OR from SZ573408 to SZ572437 - it is 0.183M or 0.295K long</desc>
+</wpt>
+<wpt lat="50.66178" lon="-1.18817">
+  <name>NC44</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.66175,-1.18847 to 50.66198,-1.18749 OR from SZ574498 to SZ575501 - it is 0.046M or 0.074K long</desc>
+</wpt>
+<wpt lat="50.62985" lon="-1.20563">
+  <name>NC30</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.62955,-1.20573 to 50.63042,-1.20542 OR from SZ562139 to SZ562149 - it is 0.062M or 0.099K long</desc>
+</wpt>
+<wpt lat="50.62957" lon="-1.2129">
+  <name>NC31</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.62945,-1.21288 to 50.63021,-1.21308 OR from SZ557137 to SZ557146 - it is 0.053M or 0.086K long</desc>
+</wpt>
+<wpt lat="50.62695" lon="-1.22005">
+  <name>NC43</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.62805,-1.21780 to 50.62641,-1.22244 OR from SZ554121 to SZ550103 - it is 0.243M or 0.391K long</desc>
+</wpt>
+<wpt lat="50.66082" lon="-1.19441">
+  <name>NC42</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.66268,-1.19188 to 50.65916,-1.19523 OR from SZ572509 to SZ569469 - it is 0.298M or 0.48K long</desc>
+</wpt>
+<wpt lat="50.66978" lon="-1.19057">
+  <name>NC53</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.67002,-1.19164 to 50.66907,-1.18901 OR from SZ572590 to SZ574580 - it is 0.134M or 0.216K long</desc>
+</wpt>
+<wpt lat="50.66941" lon="-1.2115">
+  <name>NC8</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.66897,-1.21293 to 50.66985,-1.20963 OR from SZ557577 to SZ559587 - it is 0.157M or 0.253K long</desc>
+</wpt>
+<wpt lat="50.67503" lon="-1.21435">
+  <name>NC6</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.67584,-1.21204 to 50.67403,-1.21767 OR from SZ557653 to SZ553633 - it is 0.283M or 0.455K long</desc>
+</wpt>
+<wpt lat="50.67747" lon="-1.19661">
+  <name>NC45</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.67890,-1.20016 to 50.67574,-1.19393 OR from SZ566688 to SZ570654 - it is 0.386M or 0.622K long</desc>
+</wpt>
+<wpt lat="50.66184" lon="-1.21741">
+  <name>NC25</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.66083,-1.22202 to 50.66184,-1.21117 OR from SZ550486 to SZ558498 - it is 0.524M or 0.843K long</desc>
+</wpt>
+<wpt lat="50.67243" lon="-1.20238">
+  <name>NC53</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.67389,-1.20255 to 50.67070,-1.20221 OR from SZ564632 to SZ564597 - it is 0.222M or 0.357K long</desc>
+</wpt>
+<wpt lat="50.67043" lon="-1.1958">
+  <name>NC53</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.67070,-1.20221 to 50.67002,-1.19164 OR from SZ564597 to SZ572590 - it is 0.467M or 0.752K long</desc>
+</wpt>
+<wpt lat="50.66774" lon="-1.18642">
+  <name>NC53</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.66907,-1.18901 to 50.66695,-1.18403 OR from SZ574580 to SZ577557 - it is 0.265M or 0.426K long</desc>
+</wpt>
+<wpt lat="50.66529" lon="-1.18633">
+  <name>NC42</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.66580,-1.18482 to 50.66268,-1.19188 OR from SZ577544 to SZ572509 - it is 0.394M or 0.634K long</desc>
+</wpt>
+<wpt lat="50.66317" lon="-1.18319">
+  <name>NC44</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.66198,-1.18749 to 50.66308,-1.17975 OR from SZ575501 to SZ580514 - it is 0.364M or 0.586K long</desc>
+</wpt>
+<wpt lat="50.66308" lon="-1.17974">
+  <name>NC44</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.66308,-1.17975 to 50.66332,-1.17960 OR from SZ580514 to SZ580517 - it is 0.018M or 0.029K long</desc>
+</wpt>
+<wpt lat="50.66378" lon="-1.17945">
+  <name>NC44</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.66332,-1.17960 to 50.66444,-1.17885 OR from SZ580517 to SZ581529 - it is 0.088M or 0.142K long</desc>
+</wpt>
+<wpt lat="50.66371" lon="-1.17769">
+  <name>NC44</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.66444,-1.17885 to 50.66294,-1.17762 OR from SZ581529 to SZ582513 - it is 0.162M or 0.261K long</desc>
+</wpt>
+<wpt lat="50.67874" lon="-1.18572">
+  <name>NC5</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.67460,-1.18784 to 50.68197,-1.18495 OR from SZ574641 to SZ576724 - it is 0.545M or 0.878K long</desc>
+</wpt>
+<wpt lat="50.68227" lon="-1.19053">
+  <name>NC4</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.68197,-1.18495 to 50.68076,-1.20060 OR from SZ576724 to SZ565709 - it is 0.705M or 1.135K long</desc>
+</wpt>
+<wpt lat="50.68076" lon="-1.2006">
+  <name>NC4</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.68076,-1.20060 to 50.68075,-1.20065 OR from SZ565709 to SZ565709 - it is 0.002M or 0.004K long</desc>
+</wpt>
+<wpt lat="50.68209" lon="-1.18495">
+  <name>NC5</name>
+  <cmt>NC</cmt>
+  <desc>Bridleway from 50.68197,-1.18495 to 50.68240,-1.18491 OR from SZ576724 to SZ576728 - it is 0.03M or 0.048K long</desc>
+</wpt>
+<wpt lat="50.67382" lon="-1.19809">
+  <name>NC45a</name>
+  <cmt>NC</cmt>
+  <desc>Byway Open to All Traffic from 50.67574,-1.19393 to 50.67389,-1.20255 OR from SZ570654 to SZ564632 - it is 0.454M or 0.731K long</desc>
+</wpt>
+<wpt lat="50.6379" lon="-1.21664">
+  <name>NC33</name>
+  <cmt>NC</cmt>
+  <desc>Byway Open to All Traffic from 50.63727,-1.21557 to 50.63830,-1.21691 OR from SZ555224 to SZ554236 - it is 0.099M or 0.159K long</desc>
+</wpt>
+<wpt lat="50.63854" lon="-1.21877">
+  <name>NC33</name>
+  <cmt>NC</cmt>
+  <desc>Byway Open to All Traffic from 50.63830,-1.21691 to 50.63840,-1.22209 OR from SZ554236 to SZ551236 - it is 0.242M or 0.39K long</desc>
+</wpt>
+<wpt lat="50.67572" lon="-1.19107">
+  <name>NC45a</name>
+  <cmt>NC</cmt>
+  <desc>Byway Open to All Traffic from 50.67460,-1.18784 to 50.67574,-1.19393 OR from SZ574641 to SZ570654 - it is 0.302M or 0.485K long</desc>
+</wpt>
+<wpt lat="50.67503" lon="-1.20284">
+  <name>NC45a</name>
+  <cmt>NC</cmt>
+  <desc>Byway Open to All Traffic from 50.67389,-1.20255 to 50.67570,-1.20273 OR from SZ564632 to SZ564652 - it is 0.127M or 0.204K long</desc>
+</wpt>
+<wpt lat="50.66519" lon="-1.19667">
+  <name>NC11b</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66445,-1.19739 to 50.66606,-1.19636 OR from SZ568528 to SZ568546 - it is 0.122M or 0.197K long</desc>
+</wpt>
+<wpt lat="50.66398" lon="-1.19588">
+  <name>NC12</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66445,-1.19739 to 50.66362,-1.19513 OR from SZ568528 to SZ569519 - it is 0.117M or 0.188K long</desc>
+</wpt>
+<wpt lat="50.62495" lon="-1.2002">
+  <name>NC39b</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.62211,-1.20085 to 50.62757,-1.19930 OR from SZ566057 to SZ567118 - it is 0.385M or 0.62K long</desc>
+</wpt>
+<wpt lat="50.62196" lon="-1.20563">
+  <name>NC39</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.62263,-1.21182 to 50.62208,-1.20276 OR from SZ558062 to SZ564056 - it is 0.425M or 0.684K long</desc>
+</wpt>
+<wpt lat="50.62275" lon="-1.20142">
+  <name>NC39</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.62208,-1.20276 to 50.62432,-1.20147 OR from SZ564056 to SZ565081 - it is 0.184M or 0.297K long</desc>
+</wpt>
+<wpt lat="50.6261" lon="-1.20067">
+  <name>NC39</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.62432,-1.20147 to 50.62757,-1.19930 OR from SZ565081 to SZ567118 - it is 0.259M or 0.416K long</desc>
+</wpt>
+<wpt lat="50.62947" lon="-1.19873">
+  <name>NC39</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.62936,-1.19874 to 50.62985,-1.19942 OR from SZ567137 to SZ567143 - it is 0.048M or 0.077K long</desc>
+</wpt>
+<wpt lat="50.62819" lon="-1.19908">
+  <name>NC39</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.62757,-1.19930 to 50.62873,-1.19891 OR from SZ567118 to SZ567130 - it is 0.082M or 0.132K long</desc>
+</wpt>
+<wpt lat="50.6215" lon="-1.20119">
+  <name>NC39a</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.62150,-1.20119 to 50.62170,-1.20093 OR from SZ566050 to SZ566052 - it is 0.018M or 0.029K long</desc>
+</wpt>
+<wpt lat="50.62333" lon="-1.20129">
+  <name>NC39a</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.62211,-1.20085 to 50.62432,-1.20147 OR from SZ566057 to SZ565081 - it is 0.157M or 0.253K long</desc>
+</wpt>
+<wpt lat="50.63875" lon="-1.21504">
+  <name>NC33a</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.63830,-1.21691 to 50.63946,-1.21206 OR from SZ554236 to SZ558249 - it is 0.227M or 0.366K long</desc>
+</wpt>
+<wpt lat="50.63575" lon="-1.20894">
+  <name>NC32</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.63592,-1.21238 to 50.63455,-1.20550 OR from SZ557209 to SZ562195 - it is 0.327M or 0.526K long</desc>
+</wpt>
+<wpt lat="50.63637" lon="-1.21463">
+  <name>NC32</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.63704,-1.21588 to 50.63603,-1.21232 OR from SZ555222 to SZ557211 - it is 0.176M or 0.284K long</desc>
+</wpt>
+<wpt lat="50.63557" lon="-1.2008">
+  <name>NC37b</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.63585,-1.20426 to 50.63540,-1.19796 OR from SZ563209 to SZ568205 - it is 0.317M or 0.51K long</desc>
+</wpt>
+<wpt lat="50.64491" lon="-1.20231">
+  <name>NC28</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.64535,-1.20437 to 50.64437,-1.20121 OR from SZ563315 to SZ565304 - it is 0.162M or 0.26K long</desc>
+</wpt>
+<wpt lat="50.64541" lon="-1.20761">
+  <name>NC28</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.64612,-1.21012 to 50.64547,-1.20454 OR from SZ559323 to SZ563316 - it is 0.339M or 0.546K long</desc>
+</wpt>
+<wpt lat="50.64722" lon="-1.21948">
+  <name>NC36</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.64811,-1.22193 to 50.64899,-1.21379 OR from SZ551344 to SZ556355 - it is 0.444M or 0.714K long</desc>
+</wpt>
+<wpt lat="50.65203" lon="-1.2131">
+  <name>NC24</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.65001,-1.21456 to 50.65333,-1.21077 OR from SZ556366 to SZ558403 - it is 0.291M or 0.468K long</desc>
+</wpt>
+<wpt lat="50.65379" lon="-1.21647">
+  <name>NC26</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.65511,-1.21752 to 50.65001,-1.21456 OR from SZ554422 to SZ556366 - it is 0.399M or 0.642K long</desc>
+</wpt>
+<wpt lat="50.65126" lon="-1.20547">
+  <name>NC16</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.65378,-1.21060 to 50.65007,-1.20180 OR from SZ559408 to SZ565368 - it is 0.476M or 0.766K long</desc>
+</wpt>
+<wpt lat="50.65123" lon="-1.19698">
+  <name>NC21</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.65128,-1.20045 to 50.65157,-1.19363 OR from SZ566381 to SZ571385 - it is 0.301M or 0.485K long</desc>
+</wpt>
+<wpt lat="50.64824" lon="-1.2004">
+  <name>NC19</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.64790,-1.20263 to 50.64888,-1.19752 OR from SZ564343 to SZ568355 - it is 0.245M or 0.394K long</desc>
+</wpt>
+<wpt lat="50.64894" lon="-1.19509">
+  <name>NC19</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.64888,-1.19752 to 50.65153,-1.19359 OR from SZ568355 to SZ571384 - it is 0.311M or 0.501K long</desc>
+</wpt>
+<wpt lat="50.64735" lon="-1.19763">
+  <name>NC35</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.64888,-1.19752 to 50.64652,-1.19781 OR from SZ568355 to SZ568328 - it is 0.165M or 0.266K long</desc>
+</wpt>
+<wpt lat="50.64544" lon="-1.19571">
+  <name>NC37</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.64639,-1.19767 to 50.64198,-1.19667 OR from SZ568327 to SZ568278 - it is 0.421M or 0.678K long</desc>
+</wpt>
+<wpt lat="50.64011" lon="-1.19665">
+  <name>NC37</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.64198,-1.19667 to 50.63831,-1.19695 OR from SZ568278 to SZ568237 - it is 0.26M or 0.419K long</desc>
+</wpt>
+<wpt lat="50.65309" lon="-1.19173">
+  <name>NC19</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.65279,-1.19369 to 50.65364,-1.18983 OR from SZ570398 to SZ573408 - it is 0.18M or 0.29K long</desc>
+</wpt>
+<wpt lat="50.65369" lon="-1.1863">
+  <name>NC22</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.65364,-1.18983 to 50.65208,-1.18458 OR from SZ573408 to SZ577391 - it is 0.314M or 0.505K long</desc>
+</wpt>
+<wpt lat="50.6514" lon="-1.18583">
+  <name>NC22b</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.65048,-1.18763 to 50.65208,-1.18458 OR from SZ575373 to SZ577391 - it is 0.18M or 0.29K long</desc>
+</wpt>
+<wpt lat="50.65185" lon="-1.18378">
+  <name>NC22a</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.65208,-1.18458 to 50.65152,-1.18269 OR from SZ577391 to SZ578385 - it is 0.092M or 0.147K long</desc>
+</wpt>
+<wpt lat="50.65003" lon="-1.18379">
+  <name>NC22</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.64936,-1.18417 to 50.65139,-1.18258 OR from SZ577361 to SZ578384 - it is 0.161M or 0.26K long</desc>
+</wpt>
+<wpt lat="50.65139" lon="-1.18258">
+  <name>NC22</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.65139,-1.18258 to 50.65152,-1.18269 OR from SZ578384 to SZ578385 - it is 0.01M or 0.016K long</desc>
+</wpt>
+<wpt lat="50.6532" lon="-1.17889">
+  <name>NC22</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.65152,-1.18269 to 50.65400,-1.17592 OR from SZ578385 to SZ583413 - it is 0.349M or 0.562K long</desc>
+</wpt>
+<wpt lat="50.63189" lon="-1.20539">
+  <name>NC30a</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.63054,-1.20547 to 50.63364,-1.20508 OR from SZ562150 to SZ563185 - it is 0.216M or 0.348K long</desc>
+</wpt>
+<wpt lat="50.64317" lon="-1.20181">
+  <name>NC29</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.64254,-1.20194 to 50.64437,-1.20121 OR from SZ565284 to SZ565304 - it is 0.131M or 0.211K long</desc>
+</wpt>
+<wpt lat="50.64472" lon="-1.201">
+  <name>NC29</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.64437,-1.20121 to 50.64654,-1.20015 OR from SZ565304 to SZ566328 - it is 0.157M or 0.253K long</desc>
+</wpt>
+<wpt lat="50.64719" lon="-1.21277">
+  <name>NC27</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.64609,-1.21032 to 50.64899,-1.21379 OR from SZ559323 to SZ556355 - it is 0.295M or 0.474K long</desc>
+</wpt>
+<wpt lat="50.64904" lon="-1.21371">
+  <name>NC27</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.64899,-1.21379 to 50.64940,-1.21356 OR from SZ556355 to SZ556359 - it is 0.031M or 0.049K long</desc>
+</wpt>
+<wpt lat="50.66742" lon="-1.18908">
+  <name>NC51a</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66742,-1.18908 to 50.66743,-1.18854 OR from SZ574561 to SZ574562 - it is 0.024M or 0.038K long</desc>
+</wpt>
+<wpt lat="50.67661" lon="-1.21223">
+  <name>NC1</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.67684,-1.21180 to 50.67643,-1.21258 OR from SZ557664 to SZ557660 - it is 0.045M or 0.073K long</desc>
+</wpt>
+<wpt lat="50.68214" lon="-1.2031">
+  <name>NC2</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.68258,-1.20408 to 50.68110,-1.20091 OR from SZ563729 to SZ565713 - it is 0.173M or 0.278K long</desc>
+</wpt>
+<wpt lat="50.68105" lon="-1.20042">
+  <name>NC3</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.68076,-1.20060 to 50.68348,-1.19267 OR from SZ565709 to SZ571740 - it is 0.42M or 0.675K long</desc>
+</wpt>
+<wpt lat="50.67789" lon="-1.21375">
+  <name>NC7</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.67819,-1.21458 to 50.67745,-1.21282 OR from SZ555679 to SZ557671 - it is 0.105M or 0.168K long</desc>
+</wpt>
+<wpt lat="50.67744" lon="-1.21272">
+  <name>NC7</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.67745,-1.21282 to 50.67684,-1.21180 OR from SZ557671 to SZ557664 - it is 0.062M or 0.1K long</desc>
+</wpt>
+<wpt lat="50.6758" lon="-1.20777">
+  <name>NC7</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.67684,-1.21180 to 50.67647,-1.20251 OR from SZ557664 to SZ564661 - it is 0.438M or 0.705K long</desc>
+</wpt>
+<wpt lat="50.67877" lon="-1.21272">
+  <name>NC1</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.67745,-1.21282 to 50.68069,-1.21243 OR from SZ557671 to SZ557707 - it is 0.229M or 0.368K long</desc>
+</wpt>
+<wpt lat="50.67053" lon="-1.20662">
+  <name>NC9</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.67001,-1.20961 to 50.67070,-1.20221 OR from SZ559589 to SZ564597 - it is 0.332M or 0.535K long</desc>
+</wpt>
+<wpt lat="50.66769" lon="-1.2071">
+  <name>NC11</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66871,-1.20819 to 50.66754,-1.20571 OR from SZ560574 to SZ562562 - it is 0.148M or 0.239K long</desc>
+</wpt>
+<wpt lat="50.66757" lon="-1.19755">
+  <name>NC11</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66734,-1.20063 to 50.66743,-1.19612 OR from SZ565560 to SZ569561 - it is 0.202M or 0.326K long</desc>
+</wpt>
+<wpt lat="50.66742" lon="-1.20397">
+  <name>NC11</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66754,-1.20571 to 50.66734,-1.20063 OR from SZ562562 to SZ565560 - it is 0.231M or 0.372K long</desc>
+</wpt>
+<wpt lat="50.66536" lon="-1.19911">
+  <name>NC12</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66734,-1.20063 to 50.66445,-1.19739 OR from SZ565560 to SZ568528 - it is 0.323M or 0.52K long</desc>
+</wpt>
+<wpt lat="50.66231" lon="-1.19008">
+  <name>NC12</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66268,-1.19188 to 50.66192,-1.18875 OR from SZ572509 to SZ574500 - it is 0.165M or 0.265K long</desc>
+</wpt>
+<wpt lat="50.65528" lon="-1.19614">
+  <name>NC40</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.65458,-1.20016 to 50.65625,-1.19434 OR from SZ566418 to SZ570437 - it is 0.287M or 0.463K long</desc>
+</wpt>
+<wpt lat="50.66745" lon="-1.20638">
+  <name>NC46</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66688,-1.20669 to 50.66754,-1.20571 OR from SZ561554 to SZ562562 - it is 0.078M or 0.125K long</desc>
+</wpt>
+<wpt lat="50.66452" lon="-1.20459">
+  <name>NC13</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66578,-1.20709 to 50.66348,-1.20289 OR from SZ561542 to SZ564517 - it is 0.304M or 0.49K long</desc>
+</wpt>
+<wpt lat="50.66239" lon="-1.20305">
+  <name>NC14</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66332,-1.20325 to 50.66126,-1.20297 OR from SZ564515 to SZ564492 - it is 0.149M or 0.24K long</desc>
+</wpt>
+<wpt lat="50.65946" lon="-1.19916">
+  <name>NC15</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66178,-1.20010 to 50.65728,-1.19899 OR from SZ566498 to SZ567448 - it is 0.345M or 0.555K long</desc>
+</wpt>
+<wpt lat="50.66353" lon="-1.19858">
+  <name>NC11b</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66222,-1.20046 to 50.66445,-1.19739 OR from SZ566503 to SZ568528 - it is 0.206M or 0.332K long</desc>
+</wpt>
+<wpt lat="50.66817" lon="-1.19343">
+  <name>NC11b</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66606,-1.19636 to 50.66859,-1.19155 OR from SZ568546 to SZ572574 - it is 0.285M or 0.459K long</desc>
+</wpt>
+<wpt lat="50.66459" lon="-1.1943">
+  <name>NC50</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66362,-1.19513 to 50.66452,-1.19410 OR from SZ569519 to SZ570529 - it is 0.087M or 0.139K long</desc>
+</wpt>
+<wpt lat="50.66447" lon="-1.19361">
+  <name>NC51</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66453,-1.19350 to 50.66452,-1.19410 OR from SZ570529 to SZ570529 - it is 0.029M or 0.046K long</desc>
+</wpt>
+<wpt lat="50.66523" lon="-1.19361">
+  <name>NC51</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66452,-1.19410 to 50.66742,-1.18908 OR from SZ570529 to SZ574561 - it is 0.331M or 0.533K long</desc>
+</wpt>
+<wpt lat="50.66685" lon="-1.19621">
+  <name>NC11c</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66606,-1.19636 to 50.66743,-1.19612 OR from SZ568546 to SZ569561 - it is 0.099M or 0.16K long</desc>
+</wpt>
+<wpt lat="50.66773" lon="-1.19574">
+  <name>NC11</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66743,-1.19612 to 50.66859,-1.19155 OR from SZ569561 to SZ572574 - it is 0.25M or 0.402K long</desc>
+</wpt>
+<wpt lat="50.67108" lon="-1.19006">
+  <name>NC10</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.67002,-1.19164 to 50.67176,-1.18873 OR from SZ572590 to SZ574610 - it is 0.202M or 0.326K long</desc>
+</wpt>
+<wpt lat="50.66478" lon="-1.17844">
+  <name>NC38</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66524,-1.17802 to 50.66444,-1.17885 OR from SZ581538 to SZ581529 - it is 0.068M or 0.109K long</desc>
+</wpt>
+<wpt lat="50.66339" lon="-1.18104">
+  <name>NC17</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66332,-1.17960 to 50.66578,-1.18468 OR from SZ580517 to SZ577544 - it is 0.302M or 0.486K long</desc>
+</wpt>
+<wpt lat="50.66252" lon="-1.17987">
+  <name>NC18</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66199,-1.17998 to 50.66308,-1.17975 OR from SZ580502 to SZ580514 - it is 0.076M or 0.123K long</desc>
+</wpt>
+<wpt lat="50.66184" lon="-1.17974">
+  <name>NC18</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66199,-1.17998 to 50.66160,-1.17942 OR from SZ580502 to SZ580497 - it is 0.037M or 0.06K long</desc>
+</wpt>
+<wpt lat="50.66158" lon="-1.17939">
+  <name>NC18</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66160,-1.17942 to 50.66116,-1.17871 OR from SZ580497 to SZ581493 - it is 0.045M or 0.072K long</desc>
+</wpt>
+<wpt lat="50.66088" lon="-1.18406">
+  <name>NC34</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66198,-1.18749 to 50.66160,-1.17942 OR from SZ575501 to SZ580497 - it is 0.463M or 0.745K long</desc>
+</wpt>
+<wpt lat="50.66289" lon="-1.19274">
+  <name>NC12</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66362,-1.19513 to 50.66268,-1.19188 OR from SZ569519 to SZ572509 - it is 0.158M or 0.254K long</desc>
+</wpt>
+<wpt lat="50.66893" lon="-1.18974">
+  <name>NC11</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66859,-1.19155 to 50.66907,-1.18901 OR from SZ572574 to SZ574580 - it is 0.117M or 0.189K long</desc>
+</wpt>
+<wpt lat="50.66243" lon="-1.18743">
+  <name>NC34</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.66243,-1.18743 to 50.66198,-1.18749 OR from SZ575506 to SZ575501 - it is 0.031M or 0.05K long</desc>
+</wpt>
+<wpt lat="50.62206" lon="-1.20083">
+  <name>NC39a</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.62170,-1.20093 to 50.62211,-1.20085 OR from SZ566052 to SZ566057 - it is 0.029M or 0.046K long</desc>
+</wpt>
+<wpt lat="50.62211" lon="-1.20093">
+  <name>NC39b</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.62208,-1.20276 to 50.62211,-1.20085 OR from SZ564056 to SZ566057 - it is 0.084M or 0.135K long</desc>
+</wpt>
+<wpt lat="50.62933" lon="-1.19874">
+  <name>NC39</name>
+  <cmt>NC</cmt>
+  <desc>Footpath from 50.62873,-1.19891 to 50.62936,-1.19874 OR from SZ567130 to SZ567137 - it is 0.044M or 0.071K long</desc>
+</wpt>
+</gpx>

@@ -1,0 +1,563 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 3.8.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ogr="http://osgeo.org/gdal" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata>
+<bounds minlat="50.665309999999998" minlon="-1.286810000000000" maxlat="50.688789999999997" maxlon="-1.250540000000000"/>                                       
+</metadata>
+<trk>
+  <name>A|43</name>
+  <extensions>
+    <ogr:qc_id>32</ogr:qc_id>
+    <ogr:description>BO|IW:2277|0.734|1184|-1.26406|50.66613|-1.27712|50.67240|452107,85420|451177,86108</ogr:description>
+  </extensions>
+  <trkseg>
+    <trkpt lat="50.66613" lon="-1.26406">
+    </trkpt>
+    <trkpt lat="50.66613" lon="-1.26407">
+    </trkpt>
+    <trkpt lat="50.66637" lon="-1.26522">
+    </trkpt>
+    <trkpt lat="50.66661" lon="-1.26625">
+    </trkpt>
+    <trkpt lat="50.66671" lon="-1.26655">
+    </trkpt>
+    <trkpt lat="50.66695" lon="-1.26706">
+    </trkpt>
+    <trkpt lat="50.66708" lon="-1.26737">
+    </trkpt>
+    <trkpt lat="50.66729" lon="-1.268">
+    </trkpt>
+    <trkpt lat="50.6676" lon="-1.26894">
+    </trkpt>
+    <trkpt lat="50.66781" lon="-1.26959">
+    </trkpt>
+    <trkpt lat="50.66799" lon="-1.26991">
+    </trkpt>
+    <trkpt lat="50.66825" lon="-1.27024">
+    </trkpt>
+    <trkpt lat="50.66844" lon="-1.2704">
+    </trkpt>
+    <trkpt lat="50.66862" lon="-1.27055">
+    </trkpt>
+    <trkpt lat="50.66918" lon="-1.27115">
+    </trkpt>
+    <trkpt lat="50.66929" lon="-1.27129">
+    </trkpt>
+    <trkpt lat="50.66969" lon="-1.27182">
+    </trkpt>
+    <trkpt lat="50.6699" lon="-1.2721">
+    </trkpt>
+    <trkpt lat="50.67022" lon="-1.27257">
+    </trkpt>
+    <trkpt lat="50.67054" lon="-1.27313">
+    </trkpt>
+    <trkpt lat="50.67083" lon="-1.27362">
+    </trkpt>
+    <trkpt lat="50.67097" lon="-1.27386">
+    </trkpt>
+    <trkpt lat="50.67111" lon="-1.27423">
+    </trkpt>
+    <trkpt lat="50.67141" lon="-1.27513">
+    </trkpt>
+    <trkpt lat="50.67164" lon="-1.27581">
+    </trkpt>
+    <trkpt lat="50.67177" lon="-1.27614">
+    </trkpt>
+    <trkpt lat="50.67191" lon="-1.27641">
+    </trkpt>
+    <trkpt lat="50.67214" lon="-1.27675">
+    </trkpt>
+    <trkpt lat="50.67226" lon="-1.27693">
+    </trkpt>
+    <trkpt lat="50.67236" lon="-1.27707">
+    </trkpt>
+    <trkpt lat="50.6724" lon="-1.27712">
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <name>A|28</name>
+  <extensions>
+    <ogr:qc_id>33</ogr:qc_id>
+    <ogr:description>BO|IW:2278|0.633|1016|-1.26955|50.67621|-1.27885|50.68205|451708,86537|451044,87180</ogr:description>
+  </extensions>
+  <trkseg>
+    <trkpt lat="50.67621" lon="-1.26955">
+    </trkpt>
+    <trkpt lat="50.67625" lon="-1.26989">
+    </trkpt>
+    <trkpt lat="50.67641" lon="-1.27026">
+    </trkpt>
+    <trkpt lat="50.67669" lon="-1.27081">
+    </trkpt>
+    <trkpt lat="50.6769" lon="-1.2715">
+    </trkpt>
+    <trkpt lat="50.67714" lon="-1.27238">
+    </trkpt>
+    <trkpt lat="50.67756" lon="-1.27368">
+    </trkpt>
+    <trkpt lat="50.67778" lon="-1.27444">
+    </trkpt>
+    <trkpt lat="50.67785" lon="-1.27455">
+    </trkpt>
+    <trkpt lat="50.67811" lon="-1.27573">
+    </trkpt>
+    <trkpt lat="50.67827" lon="-1.27633">
+    </trkpt>
+    <trkpt lat="50.67846" lon="-1.2768">
+    </trkpt>
+    <trkpt lat="50.67875" lon="-1.27736">
+    </trkpt>
+    <trkpt lat="50.67892" lon="-1.2776">
+    </trkpt>
+    <trkpt lat="50.6792" lon="-1.27788">
+    </trkpt>
+    <trkpt lat="50.67983" lon="-1.27831">
+    </trkpt>
+    <trkpt lat="50.68029" lon="-1.27861">
+    </trkpt>
+    <trkpt lat="50.68068" lon="-1.27872">
+    </trkpt>
+    <trkpt lat="50.68103" lon="-1.27883">
+    </trkpt>
+    <trkpt lat="50.68142" lon="-1.27887">
+    </trkpt>
+    <trkpt lat="50.68192" lon="-1.27886">
+    </trkpt>
+    <trkpt lat="50.68205" lon="-1.27885">
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <name>A|25</name>
+  <extensions>
+    <ogr:qc_id>34</ogr:qc_id>
+    <ogr:description>BO|IW:2279|0.378|609|-1.25775|50.67704|-1.25788|50.68235|452541,86638|452526,87228</ogr:description>
+  </extensions>
+  <trkseg>
+    <trkpt lat="50.67704" lon="-1.25775">
+    </trkpt>
+    <trkpt lat="50.67718" lon="-1.25766">
+    </trkpt>
+    <trkpt lat="50.67751" lon="-1.25764">
+    </trkpt>
+    <trkpt lat="50.67792" lon="-1.25763">
+    </trkpt>
+    <trkpt lat="50.6784" lon="-1.25759">
+    </trkpt>
+    <trkpt lat="50.67849" lon="-1.25762">
+    </trkpt>
+    <trkpt lat="50.67886" lon="-1.25763">
+    </trkpt>
+    <trkpt lat="50.67913" lon="-1.25764">
+    </trkpt>
+    <trkpt lat="50.67929" lon="-1.25778">
+    </trkpt>
+    <trkpt lat="50.67948" lon="-1.25799">
+    </trkpt>
+    <trkpt lat="50.67961" lon="-1.25805">
+    </trkpt>
+    <trkpt lat="50.67989" lon="-1.2581">
+    </trkpt>
+    <trkpt lat="50.68014" lon="-1.25809">
+    </trkpt>
+    <trkpt lat="50.68038" lon="-1.25808">
+    </trkpt>
+    <trkpt lat="50.6806" lon="-1.25829">
+    </trkpt>
+    <trkpt lat="50.68082" lon="-1.25834">
+    </trkpt>
+    <trkpt lat="50.68123" lon="-1.25804">
+    </trkpt>
+    <trkpt lat="50.6817" lon="-1.25801">
+    </trkpt>
+    <trkpt lat="50.68201" lon="-1.258">
+    </trkpt>
+    <trkpt lat="50.6823" lon="-1.25788">
+    </trkpt>
+    <trkpt lat="50.68235" lon="-1.25788">
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <name>A|43</name>
+  <extensions>
+    <ogr:qc_id>83</ogr:qc_id>
+    <ogr:description>BO|IW:2328|0.17|275|-1.26050|50.66531|-1.26406|50.66613|452359,85332|452107,85420</ogr:description>
+  </extensions>
+  <trkseg>
+    <trkpt lat="50.66531" lon="-1.2605">
+    </trkpt>
+    <trkpt lat="50.66553" lon="-1.26095">
+    </trkpt>
+    <trkpt lat="50.66569" lon="-1.26131">
+    </trkpt>
+    <trkpt lat="50.66578" lon="-1.26164">
+    </trkpt>
+    <trkpt lat="50.66584" lon="-1.26248">
+    </trkpt>
+    <trkpt lat="50.66598" lon="-1.26348">
+    </trkpt>
+    <trkpt lat="50.66607" lon="-1.26398">
+    </trkpt>
+    <trkpt lat="50.66613" lon="-1.26406">
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <name>A|28</name>
+  <extensions>
+    <ogr:qc_id>84</ogr:qc_id>
+    <ogr:description>BO|IW:2329|0.338|547|-1.25054|50.67717|-1.25775|50.67704|453050,86657|452541,86638</ogr:description>
+  </extensions>
+  <trkseg>
+    <trkpt lat="50.67717" lon="-1.25054">
+    </trkpt>
+    <trkpt lat="50.67717" lon="-1.25062">
+    </trkpt>
+    <trkpt lat="50.67717" lon="-1.2507">
+    </trkpt>
+    <trkpt lat="50.67717" lon="-1.2508">
+    </trkpt>
+    <trkpt lat="50.67718" lon="-1.25087">
+    </trkpt>
+    <trkpt lat="50.67718" lon="-1.2509">
+    </trkpt>
+    <trkpt lat="50.67718" lon="-1.25098">
+    </trkpt>
+    <trkpt lat="50.67719" lon="-1.25105">
+    </trkpt>
+    <trkpt lat="50.67719" lon="-1.2511">
+    </trkpt>
+    <trkpt lat="50.6772" lon="-1.25117">
+    </trkpt>
+    <trkpt lat="50.6772" lon="-1.25127">
+    </trkpt>
+    <trkpt lat="50.67721" lon="-1.25136">
+    </trkpt>
+    <trkpt lat="50.67727" lon="-1.25182">
+    </trkpt>
+    <trkpt lat="50.6773" lon="-1.25197">
+    </trkpt>
+    <trkpt lat="50.67733" lon="-1.25218">
+    </trkpt>
+    <trkpt lat="50.67735" lon="-1.25233">
+    </trkpt>
+    <trkpt lat="50.67736" lon="-1.25241">
+    </trkpt>
+    <trkpt lat="50.67738" lon="-1.25259">
+    </trkpt>
+    <trkpt lat="50.67739" lon="-1.25267">
+    </trkpt>
+    <trkpt lat="50.67747" lon="-1.25342">
+    </trkpt>
+    <trkpt lat="50.67748" lon="-1.25349">
+    </trkpt>
+    <trkpt lat="50.67749" lon="-1.25356">
+    </trkpt>
+    <trkpt lat="50.67749" lon="-1.25363">
+    </trkpt>
+    <trkpt lat="50.6775" lon="-1.2537">
+    </trkpt>
+    <trkpt lat="50.6775" lon="-1.25377">
+    </trkpt>
+    <trkpt lat="50.6775" lon="-1.25384">
+    </trkpt>
+    <trkpt lat="50.6775" lon="-1.25392">
+    </trkpt>
+    <trkpt lat="50.67749" lon="-1.25394">
+    </trkpt>
+    <trkpt lat="50.67749" lon="-1.25397">
+    </trkpt>
+    <trkpt lat="50.67748" lon="-1.254">
+    </trkpt>
+    <trkpt lat="50.67747" lon="-1.25404">
+    </trkpt>
+    <trkpt lat="50.67746" lon="-1.25407">
+    </trkpt>
+    <trkpt lat="50.67745" lon="-1.25412">
+    </trkpt>
+    <trkpt lat="50.67743" lon="-1.25417">
+    </trkpt>
+    <trkpt lat="50.67742" lon="-1.25421">
+    </trkpt>
+    <trkpt lat="50.67741" lon="-1.25422">
+    </trkpt>
+    <trkpt lat="50.6774" lon="-1.25426">
+    </trkpt>
+    <trkpt lat="50.67738" lon="-1.2543">
+    </trkpt>
+    <trkpt lat="50.67736" lon="-1.25433">
+    </trkpt>
+    <trkpt lat="50.67734" lon="-1.25436">
+    </trkpt>
+    <trkpt lat="50.67733" lon="-1.25438">
+    </trkpt>
+    <trkpt lat="50.67731" lon="-1.2544">
+    </trkpt>
+    <trkpt lat="50.67729" lon="-1.25443">
+    </trkpt>
+    <trkpt lat="50.67726" lon="-1.25446">
+    </trkpt>
+    <trkpt lat="50.67725" lon="-1.25448">
+    </trkpt>
+    <trkpt lat="50.67712" lon="-1.25464">
+    </trkpt>
+    <trkpt lat="50.67702" lon="-1.25476">
+    </trkpt>
+    <trkpt lat="50.67698" lon="-1.2548">
+    </trkpt>
+    <trkpt lat="50.67696" lon="-1.25482">
+    </trkpt>
+    <trkpt lat="50.67694" lon="-1.25484">
+    </trkpt>
+    <trkpt lat="50.67692" lon="-1.25486">
+    </trkpt>
+    <trkpt lat="50.67691" lon="-1.25489">
+    </trkpt>
+    <trkpt lat="50.67689" lon="-1.25491">
+    </trkpt>
+    <trkpt lat="50.67688" lon="-1.25493">
+    </trkpt>
+    <trkpt lat="50.67687" lon="-1.25494">
+    </trkpt>
+    <trkpt lat="50.67686" lon="-1.25496">
+    </trkpt>
+    <trkpt lat="50.67686" lon="-1.25497">
+    </trkpt>
+    <trkpt lat="50.67685" lon="-1.255">
+    </trkpt>
+    <trkpt lat="50.67685" lon="-1.25502">
+    </trkpt>
+    <trkpt lat="50.67684" lon="-1.25504">
+    </trkpt>
+    <trkpt lat="50.67684" lon="-1.25506">
+    </trkpt>
+    <trkpt lat="50.67684" lon="-1.25508">
+    </trkpt>
+    <trkpt lat="50.67685" lon="-1.2551">
+    </trkpt>
+    <trkpt lat="50.67685" lon="-1.25511">
+    </trkpt>
+    <trkpt lat="50.67685" lon="-1.25512">
+    </trkpt>
+    <trkpt lat="50.67685" lon="-1.2553">
+    </trkpt>
+    <trkpt lat="50.67685" lon="-1.25542">
+    </trkpt>
+    <trkpt lat="50.67685" lon="-1.25548">
+    </trkpt>
+    <trkpt lat="50.67685" lon="-1.25558">
+    </trkpt>
+    <trkpt lat="50.67684" lon="-1.25567">
+    </trkpt>
+    <trkpt lat="50.67684" lon="-1.25571">
+    </trkpt>
+    <trkpt lat="50.67683" lon="-1.25592">
+    </trkpt>
+    <trkpt lat="50.67682" lon="-1.25598">
+    </trkpt>
+    <trkpt lat="50.67682" lon="-1.25603">
+    </trkpt>
+    <trkpt lat="50.67682" lon="-1.25604">
+    </trkpt>
+    <trkpt lat="50.67683" lon="-1.2561">
+    </trkpt>
+    <trkpt lat="50.67683" lon="-1.25615">
+    </trkpt>
+    <trkpt lat="50.67684" lon="-1.2562">
+    </trkpt>
+    <trkpt lat="50.67684" lon="-1.25621">
+    </trkpt>
+    <trkpt lat="50.67684" lon="-1.2563">
+    </trkpt>
+    <trkpt lat="50.67686" lon="-1.2566">
+    </trkpt>
+    <trkpt lat="50.67688" lon="-1.25678">
+    </trkpt>
+    <trkpt lat="50.6769" lon="-1.25695">
+    </trkpt>
+    <trkpt lat="50.67691" lon="-1.25705">
+    </trkpt>
+    <trkpt lat="50.67693" lon="-1.25714">
+    </trkpt>
+    <trkpt lat="50.67694" lon="-1.25722">
+    </trkpt>
+    <trkpt lat="50.67696" lon="-1.25733">
+    </trkpt>
+    <trkpt lat="50.67699" lon="-1.25745">
+    </trkpt>
+    <trkpt lat="50.67701" lon="-1.25757">
+    </trkpt>
+    <trkpt lat="50.67704" lon="-1.25771">
+    </trkpt>
+    <trkpt lat="50.67704" lon="-1.25775">
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <name>A|28</name>
+  <extensions>
+    <ogr:qc_id>85</ogr:qc_id>
+    <ogr:description>BO|IW:2330|0.352|566|-1.25775|50.67704|-1.26556|50.67649|452541,86638|451989,86571</ogr:description>
+  </extensions>
+  <trkseg>
+    <trkpt lat="50.67704" lon="-1.25775">
+    </trkpt>
+    <trkpt lat="50.67706" lon="-1.25789">
+    </trkpt>
+    <trkpt lat="50.67695" lon="-1.25856">
+    </trkpt>
+    <trkpt lat="50.6768" lon="-1.25912">
+    </trkpt>
+    <trkpt lat="50.67657" lon="-1.25984">
+    </trkpt>
+    <trkpt lat="50.67643" lon="-1.26049">
+    </trkpt>
+    <trkpt lat="50.67641" lon="-1.2611">
+    </trkpt>
+    <trkpt lat="50.67641" lon="-1.26252">
+    </trkpt>
+    <trkpt lat="50.67644" lon="-1.26342">
+    </trkpt>
+    <trkpt lat="50.67649" lon="-1.26432">
+    </trkpt>
+    <trkpt lat="50.67651" lon="-1.26513">
+    </trkpt>
+    <trkpt lat="50.67649" lon="-1.26556">
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <name>A|28</name>
+  <extensions>
+    <ogr:qc_id>86</ogr:qc_id>
+    <ogr:description>BO|IW:2331|0.175|285|-1.28433|50.68688|-1.28681|50.68879|450652,87714|450475,87924</ogr:description>
+  </extensions>
+  <trkseg>
+    <trkpt lat="50.68688" lon="-1.28433">
+    </trkpt>
+    <trkpt lat="50.68704" lon="-1.28461">
+    </trkpt>
+    <trkpt lat="50.68721" lon="-1.28498">
+    </trkpt>
+    <trkpt lat="50.68744" lon="-1.28549">
+    </trkpt>
+    <trkpt lat="50.68773" lon="-1.28598">
+    </trkpt>
+    <trkpt lat="50.68792" lon="-1.28622">
+    </trkpt>
+    <trkpt lat="50.68813" lon="-1.28648">
+    </trkpt>
+    <trkpt lat="50.68845" lon="-1.28666">
+    </trkpt>
+    <trkpt lat="50.68879" lon="-1.28681">
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <name>A|25</name>
+  <extensions>
+    <ogr:qc_id>90</ogr:qc_id>
+    <ogr:description>BO|IW:2335|0.177|285|-1.25788|50.68235|-1.25850|50.68483|452526,87228|452479,87504</ogr:description>
+  </extensions>
+  <trkseg>
+    <trkpt lat="50.68235" lon="-1.25788">
+    </trkpt>
+    <trkpt lat="50.68264" lon="-1.25786">
+    </trkpt>
+    <trkpt lat="50.68301" lon="-1.2579">
+    </trkpt>
+    <trkpt lat="50.68328" lon="-1.25803">
+    </trkpt>
+    <trkpt lat="50.68359" lon="-1.2583">
+    </trkpt>
+    <trkpt lat="50.68375" lon="-1.2584">
+    </trkpt>
+    <trkpt lat="50.68414" lon="-1.25849">
+    </trkpt>
+    <trkpt lat="50.68442" lon="-1.25852">
+    </trkpt>
+    <trkpt lat="50.68469" lon="-1.25851">
+    </trkpt>
+    <trkpt lat="50.68483" lon="-1.2585">
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <name>A|28</name>
+  <extensions>
+    <ogr:qc_id>91</ogr:qc_id>
+    <ogr:description>BO|IW:2336|0.303|490|-1.27885|50.68205|-1.28213|50.68572|451044,87180|450809,87586</ogr:description>
+  </extensions>
+  <trkseg>
+    <trkpt lat="50.68205" lon="-1.27885">
+    </trkpt>
+    <trkpt lat="50.68272" lon="-1.27883">
+    </trkpt>
+    <trkpt lat="50.68297" lon="-1.27882">
+    </trkpt>
+    <trkpt lat="50.68309" lon="-1.27893">
+    </trkpt>
+    <trkpt lat="50.68323" lon="-1.27904">
+    </trkpt>
+    <trkpt lat="50.6834" lon="-1.27933">
+    </trkpt>
+    <trkpt lat="50.68359" lon="-1.27965">
+    </trkpt>
+    <trkpt lat="50.68426" lon="-1.28041">
+    </trkpt>
+    <trkpt lat="50.68474" lon="-1.28096">
+    </trkpt>
+    <trkpt lat="50.68501" lon="-1.28126">
+    </trkpt>
+    <trkpt lat="50.68544" lon="-1.28173">
+    </trkpt>
+    <trkpt lat="50.68565" lon="-1.28202">
+    </trkpt>
+    <trkpt lat="50.68572" lon="-1.28213">
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <name>A|28</name>
+  <extensions>
+    <ogr:qc_id>92</ogr:qc_id>
+    <ogr:description>BO|IW:2337|0.126|201|-1.28213|50.68572|-1.28433|50.68688|450809,87586|450652,87714</ogr:description>
+  </extensions>
+  <trkseg>
+    <trkpt lat="50.68572" lon="-1.28213">
+    </trkpt>
+    <trkpt lat="50.68583" lon="-1.2823">
+    </trkpt>
+    <trkpt lat="50.68622" lon="-1.28309">
+    </trkpt>
+    <trkpt lat="50.68667" lon="-1.28397">
+    </trkpt>
+    <trkpt lat="50.68688" lon="-1.28433">
+    </trkpt>
+  </trkseg>
+</trk>
+<trk>
+  <name>A|28</name>
+  <extensions>
+    <ogr:qc_id>94</ogr:qc_id>
+    <ogr:description>BO|IW:2339|0.175|285|-1.26556|50.67649|-1.26955|50.67621|451989,86571|451708,86537</ogr:description>
+  </extensions>
+  <trkseg>
+    <trkpt lat="50.67649" lon="-1.26556">
+    </trkpt>
+    <trkpt lat="50.67648" lon="-1.26591">
+    </trkpt>
+    <trkpt lat="50.67645" lon="-1.26625">
+    </trkpt>
+    <trkpt lat="50.67639" lon="-1.26743">
+    </trkpt>
+    <trkpt lat="50.67626" lon="-1.26861">
+    </trkpt>
+    <trkpt lat="50.6762" lon="-1.26939">
+    </trkpt>
+    <trkpt lat="50.67621" lon="-1.26955">
+    </trkpt>
+  </trkseg>
+</trk>
+</gpx>

@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 3.8.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata>
+<bounds minlat="50.638649999999998" minlon="-1.332680000000000" maxlat="50.670949999999998" maxlon="-1.291740000000000"/>                                       
+</metadata>
+<wpt lat="50.64225" lon="-1.29174">
+  <name>G24</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.63948,-1.29845 to 50.64050,-1.28727 OR from SZ497243 to SZ504255 - it is 0.621M or 1K long</desc>
+</wpt>
+<wpt lat="50.64526" lon="-1.29476">
+  <name>G18</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.64446,-1.29717 to 50.64622,-1.29222 OR from SZ497298 to SZ501318 - it is 0.251M or 0.403K long</desc>
+</wpt>
+<wpt lat="50.64252" lon="-1.30207">
+  <name>G16</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.64492,-1.30265 to 50.64112,-1.30082 OR from SZ494303 to SZ495261 - it is 0.29M or 0.467K long</desc>
+</wpt>
+<wpt lat="50.64097" lon="-1.30061">
+  <name>G16</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.64112,-1.30082 to 50.64075,-1.30027 OR from SZ495261 to SZ495257 - it is 0.035M or 0.057K long</desc>
+</wpt>
+<wpt lat="50.63865" lon="-1.30558">
+  <name>G14</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.64111,-1.30083 to 50.63672,-1.30862 OR from SZ495261 to SZ489211 - it is 0.56M or 0.902K long</desc>
+</wpt>
+<wpt lat="50.63876" lon="-1.31299">
+  <name>G15</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.63799,-1.31229 to 50.63971,-1.31395 OR from SZ487225 to SZ486244 - it is 0.141M or 0.227K long</desc>
+</wpt>
+<wpt lat="50.64049" lon="-1.31452">
+  <name>G15</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.63971,-1.31395 to 50.64130,-1.31503 OR from SZ486244 to SZ485262 - it is 0.12M or 0.194K long</desc>
+</wpt>
+<wpt lat="50.64266" lon="-1.31203">
+  <name>G15a</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.64170,-1.31290 to 50.64421,-1.31182 OR from SZ486267 to SZ487295 - it is 0.206M or 0.332K long</desc>
+</wpt>
+<wpt lat="50.64828" lon="-1.31244">
+  <name>G15a</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.64490,-1.31096 to 50.65167,-1.31249 OR from SZ488302 to SZ486377 - it is 0.52M or 0.836K long</desc>
+</wpt>
+<wpt lat="50.6429" lon="-1.31403">
+  <name>G15</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.64130,-1.31460 to 50.64421,-1.31182 OR from SZ485262 to SZ487295 - it is 0.25M or 0.402K long</desc>
+</wpt>
+<wpt lat="50.64637" lon="-1.30833">
+  <name>G15</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.64490,-1.31096 to 50.64737,-1.30658 OR from SZ488302 to SZ491330 - it is 0.257M or 0.414K long</desc>
+</wpt>
+<wpt lat="50.64472" lon="-1.31132">
+  <name>G15</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.64421,-1.31182 to 50.64490,-1.31096 OR from SZ487295 to SZ488302 - it is 0.062M or 0.1K long</desc>
+</wpt>
+<wpt lat="50.65244" lon="-1.30329">
+  <name>G15</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.65240,-1.30485 to 50.65247,-1.30260 OR from SZ492386 to SZ493387 - it is 0.099M or 0.159K long</desc>
+</wpt>
+<wpt lat="50.64884" lon="-1.30546">
+  <name>G15</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.64737,-1.30658 to 50.65240,-1.30485 OR from SZ491330 to SZ492386 - it is 0.377M or 0.607K long</desc>
+</wpt>
+<wpt lat="50.64625" lon="-1.30242">
+  <name>G16a</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.64556,-1.30206 to 50.64671,-1.30333 OR from SZ494310 to SZ493323 - it is 0.115M or 0.185K long</desc>
+</wpt>
+<wpt lat="50.64741" lon="-1.30136">
+  <name>G21</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.64818,-1.29957 to 50.64671,-1.30333 OR from SZ496340 to SZ493323 - it is 0.209M or 0.336K long</desc>
+</wpt>
+<wpt lat="50.64913" lon="-1.30731">
+  <name>G16b</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.64737,-1.30658 to 50.65127,-1.30853 OR from SZ491330 to SZ489373 - it is 0.286M or 0.46K long</desc>
+</wpt>
+<wpt lat="50.65162" lon="-1.30884">
+  <name>G16b</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.65127,-1.30853 to 50.65268,-1.30944 OR from SZ489373 to SZ489389 - it is 0.107M or 0.172K long</desc>
+</wpt>
+<wpt lat="50.64717" lon="-1.30449">
+  <name>G16b</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.64671,-1.30333 to 50.64737,-1.30658 OR from SZ493323 to SZ491330 - it is 0.185M or 0.298K long</desc>
+</wpt>
+<wpt lat="50.64315" lon="-1.33005">
+  <name>G13</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.64264,-1.33314 to 50.64402,-1.32684 OR from SZ472276 to SZ476291 - it is 0.299M or 0.482K long</desc>
+</wpt>
+<wpt lat="50.64456" lon="-1.32347">
+  <name>G13</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.64402,-1.32684 to 50.64432,-1.32083 OR from SZ476291 to SZ481295 - it is 0.28M or 0.45K long</desc>
+</wpt>
+<wpt lat="50.64732" lon="-1.33163">
+  <name>G12b</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.64546,-1.32888 to 50.64813,-1.33119 OR from SZ475307 to SZ473337 - it is 0.264M or 0.425K long</desc>
+</wpt>
+<wpt lat="50.64481" lon="-1.32782">
+  <name>G12</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.64402,-1.32684 to 50.64535,-1.32834 OR from SZ476291 to SZ475306 - it is 0.119M or 0.191K long</desc>
+</wpt>
+<wpt lat="50.64541" lon="-1.32849">
+  <name>G12b</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.64535,-1.32834 to 50.64546,-1.32888 OR from SZ475306 to SZ475307 - it is 0.025M or 0.041K long</desc>
+</wpt>
+<wpt lat="50.64606" lon="-1.33129">
+  <name>G12</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.64546,-1.32888 to 50.64666,-1.33532 OR from SZ475307 to SZ470320 - it is 0.304M or 0.489K long</desc>
+</wpt>
+<wpt lat="50.64828" lon="-1.33268">
+  <name>G22a</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.64813,-1.33119 to 50.64886,-1.33459 OR from SZ473337 to SZ471345 - it is 0.159M or 0.256K long</desc>
+</wpt>
+<wpt lat="50.6538" lon="-1.31257">
+  <name>G6</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.65128,-1.31427 to 50.65695,-1.31151 OR from SZ485373 to SZ487436 - it is 0.461M or 0.743K long</desc>
+</wpt>
+<wpt lat="50.65822" lon="-1.31208">
+  <name>G6</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.65695,-1.31151 to 50.66053,-1.31373 OR from SZ487436 to SZ486476 - it is 0.276M or 0.444K long</desc>
+</wpt>
+<wpt lat="50.66613" lon="-1.3233">
+  <name>G7</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.66997,-1.32371 to 50.66277,-1.32465 OR from SZ478580 to SZ478500 - it is 0.672M or 1.082K long</desc>
+</wpt>
+<wpt lat="50.66271" lon="-1.32713">
+  <name>G22</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.66247,-1.32904 to 50.66277,-1.32465 OR from SZ475497 to SZ478500 - it is 0.202M or 0.325K long</desc>
+</wpt>
+<wpt lat="50.66328" lon="-1.32115">
+  <name>G7</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.66247,-1.31750 to 50.66277,-1.32465 OR from SZ483497 to SZ478500 - it is 0.397M or 0.638K long</desc>
+</wpt>
+<wpt lat="50.66107" lon="-1.31557">
+  <name>G6</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.66247,-1.31750 to 50.66063,-1.31448 OR from SZ483497 to SZ485477 - it is 0.19M or 0.306K long</desc>
+</wpt>
+<wpt lat="50.66062" lon="-1.31421">
+  <name>G6</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.66063,-1.31448 to 50.66053,-1.31373 OR from SZ485477 to SZ486476 - it is 0.034M or 0.054K long</desc>
+</wpt>
+<wpt lat="50.66" lon="-1.31483">
+  <name>G8</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.66063,-1.31448 to 50.65923,-1.31516 OR from SZ485477 to SZ485461 - it is 0.104M or 0.167K long</desc>
+</wpt>
+<wpt lat="50.65976" lon="-1.31105">
+  <name>G8</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.66053,-1.31373 to 50.65862,-1.30454 OR from SZ486476 to SZ492455 - it is 0.428M or 0.69K long</desc>
+</wpt>
+<wpt lat="50.65775" lon="-1.30507">
+  <name>G8</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.65705,-1.30540 to 50.65862,-1.30454 OR from SZ491438 to SZ492455 - it is 0.118M or 0.19K long</desc>
+</wpt>
+<wpt lat="50.65864" lon="-1.3034">
+  <name>G8</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.65862,-1.30454 to 50.65882,-1.30105 OR from SZ492455 to SZ495458 - it is 0.158M or 0.254K long</desc>
+</wpt>
+<wpt lat="50.66914" lon="-1.31627">
+  <name>G10</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.66998,-1.31878 to 50.66880,-1.31350 OR from SZ482581 to SZ486568 - it is 0.249M or 0.4K long</desc>
+</wpt>
+<wpt lat="50.67095" lon="-1.31329">
+  <name>G6</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.67358,-1.31311 to 50.66880,-1.31350 OR from SZ486621 to SZ486568 - it is 0.343M or 0.553K long</desc>
+</wpt>
+<wpt lat="50.66848" lon="-1.31019">
+  <name>G10</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.66880,-1.31350 to 50.66775,-1.30741 OR from SZ486568 to SZ490557 - it is 0.279M or 0.449K long</desc>
+</wpt>
+<wpt lat="50.67019" lon="-1.31858">
+  <name>G23</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.66998,-1.31878 to 50.67091,-1.31771 OR from SZ482581 to SZ483591 - it is 0.083M or 0.134K long</desc>
+</wpt>
+<wpt lat="50.66403" lon="-1.29589">
+  <name>G1</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.66231,-1.29515 to 50.66439,-1.29912 OR from SZ499497 to SZ496520 - it is 0.433M or 0.697K long</desc>
+</wpt>
+<wpt lat="50.67076" lon="-1.32404">
+  <name>G7</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.67235,-1.32654 to 50.66997,-1.32371 OR from SZ476607 to SZ478580 - it is 0.223M or 0.359K long</desc>
+</wpt>
+<wpt lat="50.66992" lon="-1.32042">
+  <name>G10</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.66986,-1.32198 to 50.66998,-1.31878 OR from SZ480579 to SZ482581 - it is 0.142M or 0.229K long</desc>
+</wpt>
+<wpt lat="50.66773" lon="-1.31414">
+  <name>G6</name>
+  <cmt>G</cmt>
+  <desc>Bridleway from 50.66880,-1.31350 to 50.66575,-1.31420 OR from SZ486568 to SZ485534 - it is 0.223M or 0.358K long</desc>
+</wpt>
+<wpt lat="50.66741" lon="-1.31877">
+  <name>G7a</name>
+  <cmt>G</cmt>
+  <desc>Byway Open to All Traffic from 50.66986,-1.32198 to 50.66558,-1.31467 OR from SZ480579 to SZ485532 - it is 0.448M or 0.722K long</desc>
+</wpt>
+<wpt lat="50.66465" lon="-1.31551">
+  <name>G7b</name>
+  <cmt>G</cmt>
+  <desc>Byway Open to All Traffic from 50.66558,-1.31467 to 50.66247,-1.31750 OR from SZ485532 to SZ483497 - it is 0.252M or 0.405K long</desc>
+</wpt>
+<wpt lat="50.66998" lon="-1.323">
+  <name>G7a</name>
+  <cmt>G</cmt>
+  <desc>Byway Open to All Traffic from 50.66997,-1.32371 to 50.66986,-1.32198 OR from SZ478580 to SZ480579 - it is 0.077M or 0.123K long</desc>
+</wpt>
+<wpt lat="50.65168" lon="-1.29886">
+  <name>G19</name>
+  <cmt>G</cmt>
+  <desc>Footpath from 50.65123,-1.30141 to 50.65195,-1.29684 OR from SZ494373 to SZ498382 - it is 0.207M or 0.333K long</desc>
+</wpt>
+<wpt lat="50.66085" lon="-1.30574">
+  <name>G11</name>
+  <cmt>G</cmt>
+  <desc>Footpath from 50.65862,-1.30454 to 50.66348,-1.30559 OR from SZ492455 to SZ491509 - it is 0.41M or 0.66K long</desc>
+</wpt>
+<wpt lat="50.67044" lon="-1.29553">
+  <name>G5</name>
+  <cmt>G</cmt>
+  <desc>Footpath from 50.66845,-1.30216 to 50.67316,-1.29335 OR from SZ494565 to SZ500618 - it is 0.567M or 0.912K long</desc>
+</wpt>
+<wpt lat="50.64627" lon="-1.32657">
+  <name>G12a</name>
+  <cmt>G</cmt>
+  <desc>Footpath from 50.64535,-1.32834 to 50.64737,-1.32195 OR from SZ475306 to SZ480329 - it is 0.388M or 0.624K long</desc>
+</wpt>
+<wpt lat="50.65662" lon="-1.31327">
+  <name>G9</name>
+  <cmt>G</cmt>
+  <desc>Footpath from 50.65923,-1.31516 to 50.65695,-1.31151 OR from SZ485461 to SZ487436 - it is 0.367M or 0.591K long</desc>
+</wpt>
+<wpt lat="50.65178" lon="-1.30744">
+  <name>G17</name>
+  <cmt>G</cmt>
+  <desc>Footpath from 50.65127,-1.30853 to 50.65240,-1.30485 OR from SZ489373 to SZ492386 - it is 0.187M or 0.301K long</desc>
+</wpt>
+<wpt lat="50.6639" lon="-1.30595">
+  <name>G25</name>
+  <cmt>G</cmt>
+  <desc>Footpath from 50.66368,-1.30605 to 50.66397,-1.30550 OR from SZ491511 to SZ491515 - it is 0.036M or 0.059K long</desc>
+</wpt>
+</gpx>

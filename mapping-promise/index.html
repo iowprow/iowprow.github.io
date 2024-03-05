@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- For mobile browsers -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Isle of Wight Public Rights of Way - Ramblers Path Managers</title>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script></head>
+	<script src="../js/leaflet.browser.print.min.js"></script>
+	
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>	
+   	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"/>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+	<link rel="stylesheet" href="../js/L.Control.Layers.Tree.css" crossorigin=""/>
+    <script src="../js/L.Control.Layers.Tree.js"></script>
+	<script src="../js/leaflet.ajax.min.js"></script>
+	<script src="../js/prow.js"></script>
+	<link rel="stylesheet" href="../css/style.css"/>
+</head>
+	</head>
+	<body>
+		<h2 class="heading">Isle of Wight Public Rights of Way - Ramblers Path Managers</h2> 
+
+		<div id="map"> </div> 
+		<div class="button-group flex-style"> 
+			<div class="component1"> 
+				<button class="map-zoom-out-btn">Back to start</button> 
+			</div> 
+			<div class="component2"> 
+				<div class="ui-widget"  style="text-align:left;">
+					<input class="select-dropdown" id="autocomplete" placeholder="Search for: Path">
+					<input type="hidden" id="autocomplete-id">
+					<button class="clear-search-btn"> Clear Search </button> 
+					<button type="button" id="allprow" class="btn btn-success">All</button>
+					<button type="button" id="footpaths" class="btn btn-primary">Footpaths</button>
+					<button type="button" id="bridleways" class="btn btn-danger">Bridleways</button>
+					<button type="button" id="byways" class="btn btn-danger">Byways</button>
+				</div>  
+			</div> 
+		</div> 	
+
+	<script>
+	// change this depending on the root data directory
+	var center = [50.675, -1.31];	
+	var startZoom = 12;	
+	var lastZoom;
+	var tooltipThreshold = 14;
+	var dataPath = "../data/";
+	var uniqueLayernames=[];	
+	var arr = [];
+	var arr1 = [];
+	
+	const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		minZoom: 0,
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	});
+	const openTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+		minZoom: 0,
+		maxZoom: 19,
+		attribution: ' &copy; <a href="https://opentopomap.org">OpenTopoMap</a>)'
+	});	
+
+		
+	const map = L.map('map', { center: center, zoom: startZoom,layers: [osm]});	
+	map.attributionControl.setPrefix('PROW Data provided by the Isle of Wight Council')
+	map.getPane('tooltipPane').style.display = 'none';
+	
+	var promise = $.getJSON("../data/all.geojson");
+    promise.then(function(data) {
+        var allprow = L.geoJson(data);
+
+		var bridleways = L.geoJson(data, {
+            filter: function(feature, layer) {
+                return feature.properties.ROW_TYPE == "Bridleway";
+            },
+			style: lineStyle,
+			onEachFeature: forEachFeature2
+        });
+        var footpaths = L.geoJson(data, {
+            filter: function(feature, layer) {
+                return feature.properties.ROW_TYPE == "Footpath";
+            },
+			style: lineStyle,
+			onEachFeature: forEachFeature2
+        });
+        var byways = L.geoJson(data, {
+            filter: function(feature, layer) {
+                return feature.properties.ROW_TYPE == "BOAT";
+            },
+			style: lineStyle,
+			onEachFeature: forEachFeature2
+        });
+        map.fitBounds(allprow.getBounds(), {
+            padding: [50, 50]
+        });
+        bridleways.addTo(map)
+        footpaths.addTo(map)
+        byways.addTo(map)
+        // The JavaScript below is new
+        $("#byways").click(function() {
+            map.addLayer(byways)
+            map.removeLayer(bridleways)
+            map.removeLayer(footpaths)
+        });
+        $("#footpaths").click(function() {
+            map.addLayer(footpaths)
+            map.removeLayer(bridleways)
+            map.removeLayer(byways)
+        });
+        $("#bridleways").click(function() {
+            map.addLayer(bridleways)
+            map.removeLayer(footpaths)
+            map.removeLayer(byways)
+        });
+        $("#allprow").click(function() {
+            map.addLayer(bridleways)
+            map.addLayer(footpaths)
+            map.addLayer(byways)
+        });
+    });
+
+
+	addDataToAutocomplete(arr1);
+
+	function addDataToAutocomplete(arr) {				
+		arr.sort(function(a, b){ // sort object by Name/label
+            var nameA=a.label, nameB=b.label;
+            if (nameA < nameB) //sort string ascending
+                return -1 
+            if (nameA > nameB)
+                return 1
+            return 0 //default return value (no sorting)
+        })	
+		
+
+		$( "#autocomplete" ).autocomplete({
+			source: arr,
+			focus: function( event, ui ) {
+				$( "#autocomplete" ).val( ui.item.label );
+				return false;
+			},
+			select: function( event, ui ) {
+				$( "#autocomplete" ).val( ui.item.label );
+				$( "#autocomplete-id" ).val( ui.item.value );
+				return false;
+			}
+		}); 
+		
+		$( "#autocomplete" ).on( "autocompleteselect", function( event, ui ) {
+			pathSelect(ui.item.label, ui.item.value);  
+			ui.item.value = ui.item.value;
+		});
+	}
+
+
+	var fg = L.featureGroup().addTo(map)
+  	function pathSelect(label, value){
+		if(value!="") {
+			var optionSelected = value.split(',');	
+			lon = optionSelected[1];
+			lat = optionSelected[0];
+			layerName = optionSelected[2];
+			fg.clearLayers();			
+			var markerCircle = L.circle([lon,lat], {
+				radius: 300,
+				fillColor: 'steelblue',
+				fillOpacity: 0.4,
+				weight: 0,
+			}).addTo(fg);			
+			
+			map.flyTo([optionSelected[1], optionSelected[0]], 15 ); 
+		} 
+
+	//	map._layers[a].fire('click');  // 'clicks' on state name from search
+	//	var layer = map._layers[a];
+	//	map.fitBounds(layer.getBounds());  // zooms to selected poly
+    }
+// END...fire off click event and zoom to polygon
+
+
+	document.querySelector(".map-zoom-out-btn").addEventListener("click", () => { 
+		fg.clearLayers();		
+		document.getElementById('autocomplete').value = '';
+		map.flyTo(center, startZoom); 
+	}); 
+ 
+	document.querySelector(".clear-search-btn").addEventListener("click", () => { 
+		fg.clearLayers();		
+		document.getElementById('autocomplete').value = '';
+	}); 	
+	
+	var lastZoom;
+	var tooltipThreshold = 14;
+	map.on('zoomend', function() {
+		var zoom = map.getZoom();
+		if (zoom < tooltipThreshold && (!lastZoom || lastZoom >= tooltipThreshold)) {
+			map.getPane('tooltipPane').style.display = 'none';
+		} else if (zoom >= tooltipThreshold && (!lastZoom || lastZoom < tooltipThreshold)) { 
+			map.getPane('tooltipPane').style.display = 'block';
+		}
+		lastZoom = zoom;
+	})
+	
+       L.control.scale({position: 'bottomleft', imperial: false}).addTo(map);
+	   
+
+</script>
+</body>
+</html>

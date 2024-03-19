@@ -162,7 +162,7 @@
 
 	
 	var lay = L.control.layers.tree(baseTree, overlaysTree, {
-		position:'topleft',
+		position:'topright',
 		namedToggle: false,
 		selectorBack: false,
 		//closedSymbol: '&#8862; &#x1f5c0;',
@@ -173,7 +173,7 @@
 		expandAll: '',
 		collapsed: true,
 		labelIsSelector: 'both',
-    }, 'top-right');
+    });
 	
     lay.addTo(map).collapseTree().expandSelected().collapseTree(true);
 	

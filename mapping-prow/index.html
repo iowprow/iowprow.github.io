@@ -37,7 +37,6 @@
     </style>
 	<body>
 	<h4>Isle of Wight Public Rights of Way - Ramblers Path Managers</h4>
-    <div id="example"> <!--Here the layer control menu will be added--></div>    
 	<div id="map"></div>
 	<script>
 	var foStyle = {
@@ -214,7 +213,8 @@
 */ 
 	var panelLayers = new L.Control.PanelLayers(baseLayers, overLayers, {
 		compact: true,
-		//groupCheckboxes: true,
+		collapsed: true,
+		groupCheckboxes: true,
 		collapsibleGroups: true,
 		selectorGroup: true,
 	});

@@ -68,68 +68,10 @@
         .orange{
             background:orange;
         }
-
-		
-.button-group { 
-	justify-content: space-evenly !important; 
-} 
-.map-zoom-out-btn, .search-btn, .clear-search-btn { 
-	background-color: #0072B5; 
-	color: #FFF; 
-	padding: 5px 15px; 
-	border: none; 
-	font-size: 17px; 
-	border-radius: 5px; 
-	cursor: pointer; 
-} 
-.select-dropdown { 
-	display: inline-block; 
-	margin: 0 15px 0 0; 
-	padding: 5px 15px; 
-	border: 1px solid #0072B5; 
-	font: inherit; 
-	-webkit-appearance: none; 
-	-moz-appearance: none; 
-	-ms-appearance: none; 
-	appearance: none; 
-	background: #FFF; 			
-} 
-.footer { 
-	position: fixed; 
-	left: 0; 
-	bottom: 0; 
-	width: 100%; 
-	display: flex; 
-	justify-content: center; 
-	align-items: center; 
-	text-align: center; 
-	font-size: 15px; 
-	padding-bottom: 8px; 
-} 
-.footer a { 
-	padding: 0 5px 0 5px; 
-	color: #000; 
-	cursor: pointer; 
-} 
     </style>
 	<body>
 		<h2 class="heading">Isle of Wight Public Rights of Way - Ramblers Path Managers</h2> 
 		<div id="map"></div>
-
-		<div class="button-group flex-style"> 
-			<div class="component1"> 
-				<button class="map-zoom-out-btn">Back to start</button> 
-			</div> 
-			<div class="component2"> 
-				<div class="ui-widget"  style="text-align:left;">
-					<input class="select-dropdown" id="autocomplete" placeholder="Search for: Path">
-					<input type="hidden" id="autocomplete-id">
-					<button class="clear-search-btn"> Clear Search </button> 
-				</div>  
-			</div> 
-		</div> 	
-		<footer class="footer flex-style">&#169; IOWPROW 2024 </footer> 	
-
 	<script>
 	var center = [50.65, -1.30];	
 	var uniqueLayernames=[];	
@@ -273,8 +215,6 @@
 	addDataToAutocomplete(arr1);
 
 	function addDataToAutocomplete(arr) {
-		console.log('arr');
-		console.log(arr);
 		
 		arr.sort(function(a, b){ // sort object by Name/label
             var nameA=a.label, nameB=b.label

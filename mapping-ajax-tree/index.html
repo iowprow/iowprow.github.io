@@ -215,14 +215,16 @@
 	overlaysTree.children.splice(1,0,{label: '<div id="onlysel">-Or show only selected-</div>'});
 
 	var lay = L.control.layers.tree(baseTree, overlaysTree, {
-		position:'topleft',
+		position:'topright',
 		namedToggle: false,
 		selectorBack: false,
 		//closedSymbol: '&#8862; &#x1f5c0;',
 		//openedSymbol: '&#8863; &#x1f5c1;',
-		collapseAll: 'Collapse',
-		expandAll: 'Expand',
-		collapsed: false,
+		//collapseAll: '&#9650;',
+		//expandAll: '&#9660;',
+		collapseAll: '',
+		expandAll: '',
+		collapsed: true,
 		labelIsSelector: 'both',
     });
 	

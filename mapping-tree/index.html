@@ -167,7 +167,7 @@
 		selectorBack: false,
 		//closedSymbol: '&#8862; &#x1f5c0;',
 		//openedSymbol: '&#8863; &#x1f5c1;',
-		collapseAll: 'Collapse',
+		collapseAll: '&#9650;',
 		expandAll: 'Expand',
 		collapsed: false,
 		labelIsSelector: 'both',
@@ -189,7 +189,7 @@
 			.bindPopup("You are within " + Number((radius/1000).toFixed(2)) + " kilometers from this point").openPopup();
 		L.circle(e.latlng, radius).addTo(map);
 	}
-	map.on('locationfound', onLocationFound);
+//	map.on('locationfound', onLocationFound);
 	
 	var lastZoom;
 	var tooltipThreshold = 14;

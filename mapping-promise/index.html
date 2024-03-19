@@ -12,13 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>	
    	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"/>
 	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
-
-
-	<script type="text/javascript" src="../js/leaflet-search.src.js"></script>
-
-
 	<link rel="stylesheet" href="../js/L.Control.Layers.Tree.css" crossorigin=""/>
-	<link rel="stylesheet" href="../js/leaflet-search.src.css" crossorigin=""/>
     <script src="../js/L.Control.Layers.Tree.js"></script>
 	<script src="../js/leaflet.ajax.min.js"></script>
 	<script src="../js/prow.js"></script>
@@ -208,26 +202,6 @@
   			map.setView(latlng, zoom); // access the zoom
 		}
 	});
-
-	searchControl.on('search:locationfound', function(e) {
-		
-		//console.log('search:locationfound', );
-
-		//map.removeLayer(this._markerSearch)
-
-		e.layer.setStyle({fillColor: '#3f0', color: '#0f0'});
-		if(e.layer._popup)
-			e.layer.openPopup();
-
-	}).on('search:collapsed', function(e) {
-
-		featuresLayer.eachLayer(function(layer) {	//restore feature color
-			featuresLayer.resetStyle(layer);
-		});	
-	});
-	
-	map.addControl( searchControl );  //inizialize search control
-
 
 	var lastZoom;
 	var tooltipThreshold = 14;

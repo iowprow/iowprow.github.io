@@ -14,10 +14,11 @@
 	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
 
 
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/leaflet-search@3.0.2/dist/leaflet-search.src.min.js"></script>
+	<script type="text/javascript" src="../js/leaflet-search.src.js"></script>
 
 
 	<link rel="stylesheet" href="../js/L.Control.Layers.Tree.css" crossorigin=""/>
+	<link rel="stylesheet" href="../js/leaflet-search.src.css" crossorigin=""/>
     <script src="../js/L.Control.Layers.Tree.js"></script>
 	<script src="../js/leaflet.ajax.min.js"></script>
 	<script src="../js/prow.js"></script>
@@ -196,16 +197,6 @@
 		document.getElementById('autocomplete').value = '';
 	}); 	
 	
-
-	L.control.search({
-        layer: allprow,
-        initial: false,
-        propertyName: 'Name',
-        buildTip: function(text, val) {
-            var type = val.layer.feature.properties.Row_TYPE;
-            return '<a href="#" class="' + type + '">' + text + '<b>' + type + '</b></a>';
-        }
-    }).addTo(map);
 
 	var lastZoom;
 	var tooltipThreshold = 14;

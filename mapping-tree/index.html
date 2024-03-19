@@ -8,6 +8,12 @@
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script></head>
 	<script src="/js/leaflet.ajax.min.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>	
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"/>
+ 	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+
 	<script src="/js/leaflet.browser.print.min.js"></script>
 	<link rel="stylesheet" href="/js/L.Control.Layers.Tree.css" crossorigin=""/>
     <script src="/js/L.Control.Layers.Tree.js"></script>
@@ -67,6 +73,21 @@
 	<body>
 		<h2 class="heading">Isle of Wight Public Rights of Way - Ramblers Path Managers</h2> 
 		<div id="map"></div>
+
+		<div class="button-group flex-style"> 
+			<div class="component1"> 
+				<button class="map-zoom-out-btn">Back to start</button> 
+			</div> 
+			<div class="component2"> 
+				<div class="ui-widget"  style="text-align:left;">
+					<input class="select-dropdown" id="autocomplete" placeholder="Search for: Path">
+					<input type="hidden" id="autocomplete-id">
+					<button class="clear-search-btn"> Clear Search </button> 
+				</div>  
+			</div> 
+		</div> 	
+		<footer class="footer flex-style">&#169; IOWPROW 2024 </footer> 	
+		
 	<script>
 	var center = [50.65, -1.30];	
 	const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -202,6 +223,62 @@
 	}
 
 	
+
+	addDataToAutocomplete(arr1);
+
+	function addDataToAutocomplete(arr) {
+		
+		arr.sort(function(a, b){ // sort object by Name/label
+            var nameA=a.label, nameB=b.label
+            if (nameA < nameB) //sort string ascending
+                return -1 
+            if (nameA > nameB)
+                return 1
+            return 0 //default return value (no sorting)
+        })	
+		
+		$( "#autocomplete" ).autocomplete({
+			source: arr,
+			focus: function( event, ui ) {
+				$( "#autocomplete" ).val( ui.item.label );
+				return false;
+			},
+			select: function( event, ui ) {
+				$( "#autocomplete" ).val( ui.item.label );
+				$( "#autocomplete-id" ).val( ui.item.value );
+				return false;
+			}
+		}); 
+		
+		$( "#autocomplete" ).on( "autocompleteselect", function( event, ui ) {
+			pathSelect(ui.item.label, ui.item.value);  
+			ui.item.value = ui.item.value;
+		});
+	}
+
+	var fg = L.featureGroup().addTo(map)
+  	function pathSelect(label, value){
+		if(value!="") {
+			var optionSelected = value.split(',');	
+			lon = optionSelected[1];
+			lat = optionSelected[0];
+			layerName = optionSelected[2];
+			fg.clearLayers();			
+			var markerCircle = L.circle([lon,lat], {
+				radius: 300,
+				fillColor: 'steelblue',
+				fillOpacity: 0.4,
+				weight: 0,
+			}).addTo(fg);
+			
+			iowProwLayers[layerName].addTo(fg);
+			
+			
+			map.flyTo([optionSelected[1], optionSelected[0]], 15 ); 
+		} 
+    }
+
+
 	var lay = L.control.layers.tree(baseTree, overlaysTree, {
 		position:'topright',
 		namedToggle: false,

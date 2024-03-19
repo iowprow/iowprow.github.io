@@ -12,8 +12,6 @@
 	<link rel="stylesheet" href="/js/L.Control.Layers.Tree.css" crossorigin=""/>
     <script src="/js/L.Control.Layers.Tree.js"></script>
 
-	<link rel="stylesheet" href="/js/leaflet-search.src.css" crossorigin=""/>
-	<script src="../js/leaflet-search.src.js"></script>
 	<style>
 		
 
@@ -221,15 +219,12 @@
     lay.addTo(map).collapseTree().expandSelected().collapseTree(true);
 	
  	// add print button
-	var browserControl = L.control.browserPrint({position: 'topleft', printModes: ["Auto","Portrait","Landscape"], title: 'Print ...'}).addTo(map);
-	
-
-	var searchControl = new L.Control.Search({
-		layer: iowProwLayers,
-		propertyName: 'Name'
+	var browserControl = L.control.browserPrint({
+		position: 'topleft', 
+		printModes: ["Auto","Portrait","Landscape"], 
+		title: 'Print ...'
 	}).addTo(map);
-
-
+	
 	// Zoom to your location
 	//map.locate({setView: true, maxZoom: 16});
 	

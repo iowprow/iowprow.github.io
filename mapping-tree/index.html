@@ -11,6 +11,9 @@
 	<script src="/js/leaflet.browser.print.min.js"></script>
 	<link rel="stylesheet" href="/js/L.Control.Layers.Tree.css" crossorigin=""/>
     <script src="/js/L.Control.Layers.Tree.js"></script>
+
+	<link rel="stylesheet" href="/js/leaflet-search.src.css" crossorigin=""/>
+	<script src="../js/leaflet-search.src.js"></script>
 	<style>
 		
 
@@ -220,6 +223,38 @@
  	// add print button
 	var browserControl = L.control.browserPrint({position: 'topleft', printModes: ["Auto","Portrait","Landscape"], title: 'Print ...'}).addTo(map);
 	
+
+	var searchControl = new L.Control.Search({
+		layer: iowProwLayers,
+		propertyName: 'Name',
+		marker: false,
+		moveToLocation: function(latlng, title, map) {
+			//map.fitBounds( latlng.layer.getBounds() );
+			var zoom = map.getBoundsZoom(latlng.layer.getBounds());
+  			map.setView(latlng, zoom); // access the zoom
+		}
+	});
+
+	searchControl.on('search:locationfound', function(e) {
+		
+		//console.log('search:locationfound', );
+
+		//map.removeLayer(this._markerSearch)
+
+		e.layer.setStyle({fillColor: '#3f0', color: '#0f0'});
+		if(e.layer._popup)
+			e.layer.openPopup();
+
+	}).on('search:collapsed', function(e) {
+
+		featuresLayer.eachLayer(function(layer) {	//restore feature color
+			featuresLayer.resetStyle(layer);
+		});	
+	});
+	
+	map.addControl( searchControl );  //inizialize search control
+
+
 	// Zoom to your location
 	//map.locate({setView: true, maxZoom: 16});
 	

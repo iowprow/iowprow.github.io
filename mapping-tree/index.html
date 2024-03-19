@@ -12,8 +12,27 @@
 	<link rel="stylesheet" href="/js/L.Control.Layers.Tree.css" crossorigin=""/>
     <script src="/js/L.Control.Layers.Tree.js"></script>
 	<style>
-        body { margin: 0; padding: 0; }
-        html, body, #map { height: 100%; width: 100vw; }
+		
+
+		body { 
+			margin: 0; 
+			padding: 0; 
+			box-sizing: border-box; 
+			font-family: sans-serif; 
+		} 
+		.heading { 
+			font-family: monospace; 
+			font-size: 40px; 
+			text-align: center; 
+			margin: 2.5vh 0; 
+		} 
+		#map { 
+			width: 90vw; 
+			height: 70vh; 
+			margin: 0 5vw 2vh; 
+			border: 3px solid #888; 
+		} 
+
 		.layer-item { color: black }
 		.layer-item-missing { color: red }
 		.leaflet-tooltip.tooltipStyle {
@@ -21,6 +40,7 @@
 		  border: 1px silver;;
 		  padding: 0px 1px 0px 1px;
 		}		
+
     </style>
 	<body>
 	<h4>Isle of Wight Public Rights of Way - Ramblers Path Managers</h4>

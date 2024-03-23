@@ -137,6 +137,7 @@ const map = new maplibregl.Map({
 });
 
 map.on("load", async () => {
+	console.log("Loaded");
   map.addControl(
     new maplibregl.NavigationControl({ showCompass: false }),
     "top-right"

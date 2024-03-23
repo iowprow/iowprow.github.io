@@ -104,7 +104,7 @@ const labelLayerIDs = [];
 
 const osm = {
   version: 8,
-  glyphs: "http://fonts.openmaptiles.org/{fontstack}/{range}.pbf",
+  glyphs: "fonts/{fontstack}/{range}.pbf",
   sources: {
     osm: {
       type: "raster",
@@ -137,7 +137,6 @@ const map = new maplibregl.Map({
 });
 
 map.on("load", async () => {
-	console.log("Loaded5");
   map.addControl(
     new maplibregl.NavigationControl({ showCompass: false }),
     "top-right"
@@ -157,21 +156,17 @@ map.on("load", async () => {
     "bottom-right"
   );
 
-  const response = await fetch("/data/combined.geojson");
-  
+  const response = await fetch("data/combined.geojson");
   const data = await response.json();
-  
   map.addSource("allgeo", {
     type: "geojson",
-    data: "/data/combined.geojson",
+    data: "data/combined.geojson",
     attribution: "PROW Data provided by the Isle of Wight Council",
   });
-  
   map.addSource("parishes", {
     type: "geojson",
-    data: "/data/parishes.geojson",
+    data: "data/parishes.geojson",
   });
-  
   parishBoundaries();
   byParish(data);
   addDataToAutocomplete(data);
@@ -227,8 +222,6 @@ function byParish(data) {
     const prowType = feature.properties["ROW_TYPE"];
     const layerID = `parish-${parishCode}`;
     const labelLayerID = `label_parish-${parishCode}`;
-	
-	console.log(labelLayerID);
 
     var filter_parish_data = ["==", ["get", "PARISH"], parishCode];
 
@@ -261,7 +254,7 @@ function byParish(data) {
           "text-allow-overlap": true,
           "text-letter-spacing": 0.05,
           "text-offset": [0, 1],
-          "text-font": ["Open Sans Regular"],
+          "text-font": ["Roboto Medium Regular"],
         },
         paint: rowTextStyle,
       });

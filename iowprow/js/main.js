@@ -157,16 +157,16 @@ map.on("load", async () => {
     "bottom-right"
   );
 
-  const response = await fetch("/data/combined.geojson");
+  const response = await fetch("/iowprow/data/combined.geojson");
   const data = await response.json();
   map.addSource("allgeo", {
     type: "geojson",
-    data: "/data/combined.geojson",
+    data: "/iowprow/data/combined.geojson",
     attribution: "PROW Data provided by the Isle of Wight Council",
   });
   map.addSource("parishes", {
     type: "geojson",
-    data: "/data/parishes.geojson",
+    data: "/iowprow/data/parishes.geojson",
   });
   parishBoundaries();
   byParish(data);

@@ -1,0 +1,218 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+
+/* css variables */
+
+:root {
+  --bar-width: 30px;
+  --bar-height: 5px;
+  --hamburger-gap: 3px;
+  --foreground: #333;
+  --background: #20bf6b;
+  --hamburger-margin: 8px;
+  --hamburger-top: 50px;
+  --hamburger-left: 8px;
+  --animation-timing: 200ms ease-in-out;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+}
+
+.hamburger-menu {
+  --x-width: calc(var(--hamburger-height) * 1.41421356237); /*square root of 2*/
+  display: flex;
+  flex-direction: column;
+  gap: var(--hamburger-gap);
+  width: max-content;
+  grid-area: header;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.hamburger-menu:has(input:checked) {
+  --foreground: #20bf6b;
+  --background: #333;
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--foreground);
+  border-radius: 9999px;
+  transform-origin: left center;
+  transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing), translate var(--animation-timing),
+    background-color var(--animation-timing);
+}
+
+.hamburger-menu input {
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+}
+
+.hamburger-menu:has(input:checked)::before {
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / -2);
+}
+
+.hamburger-menu:has(input:checked)::after {
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburger-menu input:checked {
+  opacity: 0;
+  width: 0;
+}
+
+#btn-home {
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 45px;
+  width: 29px;
+  height: 29px;
+  border: none;
+  border-radius: 3px;
+  font-size: 10px;
+  background-image: url("home.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1000;
+}
+
+#btn-screenshot {
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 80px;
+  grid-area: header;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  font-size: 10px;
+  background-image: url("camera-circle.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1000;
+}
+
+.search-box {
+  position: absolute;
+  top: 0px;
+  left: 105px;
+  padding-top: 5px;
+  padding-left: 9px;
+  z-index: 9999;
+}
+
+.search-box-inner {
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 4px;
+}
+.search-box-inner div {
+  margin-bottom: 8px;
+  display: block;
+}
+.search-box-inner input[type="search"] {
+  width: 185px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: auto 3fr;
+  grid-template-rows: 40px 0.7fr 40px; /*define three rows where the middle one takes all the remaining height using 1fr*/
+  gap: 0;
+  grid-template-areas:
+    "header  header"
+    "sidebar content"
+    "footer  footer";
+}
+
+.header {
+  grid-area: header;
+  background-color: #fed330;
+  padding: 10px;
+}
+
+.main {
+  grid-area: content;
+  background-color: lightblue;
+  padding: 10px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #20bf6b;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #fd9644;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hidden {
+  display: none;
+}
+.leftPadded {
+  padding: 5px 10px 5px 5px;
+}
+
+@media screen and (max-width: 960px) {
+  /* Adjust grid properties for smaller screens */
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header"
+      "content"
+      "sidebar"
+      "footer";
+  }
+}
+
+#map {
+  height: 60dvh;
+}
+#mapFilter {
+  padding-top: 10px;
+}
+
+.legendBox {
+  width: 11px;
+  height: 11px;
+  border-radius: 25px; /* makes a circle from a box */
+  display: inline-block;
+  margin-left: 5px;
+}
+.red {
+  background: red;
+}
+.green {
+  background: green;
+}
+.blue {
+  background: blue;
+}
+.orange {
+  background: orange;
+}

@@ -137,7 +137,7 @@ const map = new maplibregl.Map({
 });
 
 map.on("load", async () => {
-	console.log("Loaded2");
+	console.log("Loaded3");
   map.addControl(
     new maplibregl.NavigationControl({ showCompass: false }),
     "top-right"
@@ -157,16 +157,16 @@ map.on("load", async () => {
     "bottom-right"
   );
 
-  const response = await fetch("../data/combined.geojson");
+  const response = await fetch("./data/combined.geojson");
   const data = await response.json();
   map.addSource("allgeo", {
     type: "geojson",
-    data: "../data/combined.geojson",
+    data: "./data/combined.geojson",
     attribution: "PROW Data provided by the Isle of Wight Council",
   });
   map.addSource("parishes", {
     type: "geojson",
-    data: "../data/parishes.geojson",
+    data: "./data/parishes.geojson",
   });
   parishBoundaries();
   byParish(data);

@@ -1,0 +1,391 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 3.8.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata>
+<bounds minlat="50.661830000000002" minlon="-1.474910000000000" maxlat="50.719340000000003" maxlon="-1.413580000000000"/>                                       
+</metadata>
+<wpt lat="50.66914" lon="-1.44882">
+  <name>S33</name>
+  <cmt>S</cmt>
+  <desc>Bridleway from 50.66975,-1.45567 to 50.66901,-1.44410 OR from SZ385570 to SZ393562 - it is 0.56M or 0.902K long</desc>
+</wpt>
+<wpt lat="50.67499" lon="-1.45551">
+  <name>S19</name>
+  <cmt>S</cmt>
+  <desc>Bridleway from 50.66975,-1.45567 to 50.68032,-1.45406 OR from SZ385570 to SZ386688 - it is 0.754M or 1.214K long</desc>
+</wpt>
+<wpt lat="50.67214" lon="-1.44532">
+  <name>S21</name>
+  <cmt>S</cmt>
+  <desc>Bridleway from 50.67917,-1.44580 to 50.66901,-1.44410 OR from SZ392675 to SZ393562 - it is 0.737M or 1.187K long</desc>
+</wpt>
+<wpt lat="50.6928" lon="-1.42864">
+  <name>S16</name>
+  <cmt>S</cmt>
+  <desc>Bridleway from 50.69589,-1.42700 to 50.68824,-1.42915 OR from SZ405862 to SZ404777 - it is 0.545M or 0.877K long</desc>
+</wpt>
+<wpt lat="50.68992" lon="-1.41535">
+  <name>S36</name>
+  <cmt>S</cmt>
+  <desc>Bridleway from 50.68931,-1.41581 to 50.69209,-1.41466 OR from SZ413790 to SZ414821 - it is 0.203M or 0.327K long</desc>
+</wpt>
+<wpt lat="50.68362" lon="-1.42552">
+  <name>S22</name>
+  <cmt>S</cmt>
+  <desc>Bridleway from 50.68379,-1.42122 to 50.68383,-1.42883 OR from SZ409728 to SZ404728 - it is 0.345M or 0.556K long</desc>
+</wpt>
+<wpt lat="50.66574" lon="-1.436">
+  <name>S25</name>
+  <cmt>S</cmt>
+  <desc>Bridleway from 50.66758,-1.44186 to 50.66352,-1.43150 OR from SZ395547 to SZ402502 - it is 0.545M or 0.877K long</desc>
+</wpt>
+<wpt lat="50.66318" lon="-1.42872">
+  <name>S25</name>
+  <cmt>S</cmt>
+  <desc>Bridleway from 50.66352,-1.43150 to 50.66292,-1.42676 OR from SZ402502 to SZ406496 - it is 0.212M or 0.342K long</desc>
+</wpt>
+<wpt lat="50.66364" lon="-1.43254">
+  <name>S25</name>
+  <cmt>S</cmt>
+  <desc>Bridleway from 50.66352,-1.43150 to 50.66350,-1.43326 OR from SZ402502 to SZ401502 - it is 0.087M or 0.14K long</desc>
+</wpt>
+<wpt lat="50.68892" lon="-1.41561">
+  <name>S36</name>
+  <cmt>S</cmt>
+  <desc>Bridleway from 50.68845,-1.41538 to 50.68931,-1.41581 OR from SZ413780 to SZ413790 - it is 0.071M or 0.115K long</desc>
+</wpt>
+<wpt lat="50.68728" lon="-1.44843">
+  <name>S21</name>
+  <cmt>S</cmt>
+  <desc>Bridleway from 50.68973,-1.44832 to 50.68382,-1.44721 OR from SZ390793 to SZ391727 - it is 0.415M or 0.668K long</desc>
+</wpt>
+<wpt lat="50.68336" lon="-1.44428">
+  <name>S21</name>
+  <cmt>S</cmt>
+  <desc>Bridleway from 50.68382,-1.44721 to 50.68014,-1.44538 OR from SZ391727 to SZ392686 - it is 0.414M or 0.666K long</desc>
+</wpt>
+<wpt lat="50.68551" lon="-1.45327">
+  <name>S19</name>
+  <cmt>S</cmt>
+  <desc>Bridleway from 50.68032,-1.45406 to 50.69014,-1.45119 OR from SZ386688 to SZ388797 - it is 0.706M or 1.136K long</desc>
+</wpt>
+<wpt lat="50.66972" lon="-1.45932">
+  <name>S33</name>
+  <cmt>S</cmt>
+  <desc>Bridleway from 50.67052,-1.46319 to 50.66975,-1.45567 OR from SZ380578 to SZ385570 - it is 0.348M or 0.56K long</desc>
+</wpt>
+<wpt lat="50.66894" lon="-1.45571">
+  <name>S19</name>
+  <cmt>S</cmt>
+  <desc>Bridleway from 50.66755,-1.45577 to 50.66975,-1.45567 OR from SZ385546 to SZ385570 - it is 0.152M or 0.245K long</desc>
+</wpt>
+<wpt lat="50.67978" lon="-1.44555">
+  <name>S21</name>
+  <cmt>S</cmt>
+  <desc>Bridleway from 50.68014,-1.44538 to 50.67917,-1.44580 OR from SZ392686 to SZ392675 - it is 0.07M or 0.112K long</desc>
+</wpt>
+<wpt lat="50.66839" lon="-1.44274">
+  <name>S21</name>
+  <cmt>S</cmt>
+  <desc>Bridleway from 50.66901,-1.44410 to 50.66764,-1.44196 OR from SZ393562 to SZ395547 - it is 0.136M or 0.219K long</desc>
+</wpt>
+<wpt lat="50.69248" lon="-1.42089">
+  <name>S41</name>
+  <cmt>S</cmt>
+  <desc>Bridleway from 50.69264,-1.42862 to 50.69209,-1.41467 OR from SZ404826 to SZ414821 - it is 0.615M or 0.991K long</desc>
+</wpt>
+<wpt lat="50.66366" lon="-1.43694">
+  <name>S26</name>
+  <cmt>S</cmt>
+  <desc>Byway Open to All Traffic from 50.66385,-1.44139 to 50.66350,-1.43326 OR from SZ395505 to SZ401502 - it is 0.36M or 0.58K long</desc>
+</wpt>
+<wpt lat="50.66349" lon="-1.43322">
+  <name>S26</name>
+  <cmt>S</cmt>
+  <desc>Byway Open to All Traffic from 50.66350,-1.43326 to 50.66338,-1.43299 OR from SZ401502 to SZ401500 - it is 0.015M or 0.023K long</desc>
+</wpt>
+<wpt lat="50.66399" lon="-1.44288">
+  <name>S26</name>
+  <cmt>S</cmt>
+  <desc>Byway Open to All Traffic from 50.66364,-1.44347 to 50.66404,-1.44191 OR from SZ394503 to SZ395507 - it is 0.079M or 0.127K long</desc>
+</wpt>
+<wpt lat="50.6874" lon="-1.45896">
+  <name>S18</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.68038,-1.45973 to 50.69208,-1.45653 OR from SZ382688 to SZ384818 - it is 0.838M or 1.348K long</desc>
+</wpt>
+<wpt lat="50.67853" lon="-1.43754">
+  <name>S34</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.67917,-1.44580 to 50.67719,-1.43312 OR from SZ392675 to SZ401654 - it is 0.59M or 0.949K long</desc>
+</wpt>
+<wpt lat="50.69901" lon="-1.44831">
+  <name>S8</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.69514,-1.45010 to 50.70102,-1.44621 OR from SZ389853 to SZ392918 - it is 0.455M or 0.732K long</desc>
+</wpt>
+<wpt lat="50.70186" lon="-1.44506">
+  <name>S8</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.70102,-1.44621 to 50.70231,-1.44430 OR from SZ392918 to SZ393933 - it is 0.123M or 0.198K long</desc>
+</wpt>
+<wpt lat="50.7018" lon="-1.44581">
+  <name>S8</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.70102,-1.44621 to 50.70257,-1.44547 OR from SZ392918 to SZ392936 - it is 0.113M or 0.181K long</desc>
+</wpt>
+<wpt lat="50.69274" lon="-1.44773">
+  <name>S20</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.68975,-1.44782 to 50.69514,-1.45010 OR from SZ391793 to SZ389853 - it is 0.425M or 0.684K long</desc>
+</wpt>
+<wpt lat="50.68227" lon="-1.44642">
+  <name>S21a</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.68014,-1.44538 to 50.68382,-1.44721 OR from SZ392686 to SZ391727 - it is 0.267M or 0.43K long</desc>
+</wpt>
+<wpt lat="50.67511" lon="-1.43316">
+  <name>S24</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.67587,-1.43584 to 50.67467,-1.43250 OR from SZ399639 to SZ401626 - it is 0.183M or 0.295K long</desc>
+</wpt>
+<wpt lat="50.69952" lon="-1.45455">
+  <name>S7</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.69261,-1.45750 to 50.70426,-1.45798 OR from SZ384824 to SZ383954 - it is 1.019M or 1.64K long</desc>
+</wpt>
+<wpt lat="50.699" lon="-1.46806">
+  <name>S6</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.69763,-1.46757 to 50.70019,-1.46799 OR from SZ376880 to SZ376908 - it is 0.185M or 0.298K long</desc>
+</wpt>
+<wpt lat="50.69704" lon="-1.46708">
+  <name>S6a</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.69676,-1.46685 to 50.69763,-1.46757 OR from SZ377870 to SZ376880 - it is 0.068M or 0.109K long</desc>
+</wpt>
+<wpt lat="50.67338" lon="-1.43338">
+  <name>S24a</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.67249,-1.43399 to 50.67467,-1.43250 OR from SZ400602 to SZ401626 - it is 0.164M or 0.264K long</desc>
+</wpt>
+<wpt lat="50.67968" lon="-1.42647">
+  <name>S23</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.67735,-1.43232 to 50.68379,-1.42122 OR from SZ402656 to SZ409728 - it is 0.72M or 1.158K long</desc>
+</wpt>
+<wpt lat="50.68379" lon="-1.42122">
+  <name>S23</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.68379,-1.42122 to 50.68381,-1.42118 OR from SZ409728 to SZ409728 - it is 0.002M or 0.004K long</desc>
+</wpt>
+<wpt lat="50.68336" lon="-1.42126">
+  <name>S42</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.68381,-1.42118 to 50.68336,-1.41836 OR from SZ409728 to SZ411723 - it is 0.164M or 0.265K long</desc>
+</wpt>
+<wpt lat="50.68742" lon="-1.41665">
+  <name>S35</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.68589,-1.41663 to 50.68931,-1.41581 OR from SZ413752 to SZ413790 - it is 0.243M or 0.391K long</desc>
+</wpt>
+<wpt lat="50.69683" lon="-1.41578">
+  <name>S17</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.69210,-1.41467 to 50.70093,-1.41569 OR from SZ414821 to SZ413919 - it is 0.659M or 1.06K long</desc>
+</wpt>
+<wpt lat="50.69832" lon="-1.42364">
+  <name>S15</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.69830,-1.42295 to 50.69634,-1.42820 OR from SZ408889 to SZ404867 - it is 0.274M or 0.441K long</desc>
+</wpt>
+<wpt lat="50.69823" lon="-1.42784">
+  <name>S13</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.69634,-1.42820 to 50.70087,-1.42832 OR from SZ404867 to SZ404918 - it is 0.335M or 0.54K long</desc>
+</wpt>
+<wpt lat="50.66282" lon="-1.43791">
+  <name>S40</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.66307,-1.44050 to 50.66180,-1.43580 OR from SZ396497 to SZ399483 - it is 0.237M or 0.382K long</desc>
+</wpt>
+<wpt lat="50.70036" lon="-1.42193">
+  <name>S14</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.69947,-1.42207 to 50.70161,-1.42166 OR from SZ409902 to SZ409926 - it is 0.149M or 0.24K long</desc>
+</wpt>
+<wpt lat="50.71106" lon="-1.46615">
+  <name>S1</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.70681,-1.47867 to 50.71598,-1.44226 OR from SZ369981 to SZ394085 - it is 1.916M or 3.083K long</desc>
+</wpt>
+<wpt lat="50.71902" lon="-1.44097">
+  <name>S2</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.71694,-1.43999 to 50.72149,-1.44276 OR from SZ396096 to SZ394146 - it is 0.368M or 0.592K long</desc>
+</wpt>
+<wpt lat="50.71327" lon="-1.44232">
+  <name>S4</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.71598,-1.44226 to 50.71103,-1.44188 OR from SZ394085 to SZ395030 - it is 0.426M or 0.686K long</desc>
+</wpt>
+<wpt lat="50.70962" lon="-1.43425">
+  <name>S29</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.70897,-1.43832 to 50.71029,-1.43328 OR from SZ397007 to SZ401022 - it is 0.25M or 0.403K long</desc>
+</wpt>
+<wpt lat="50.71427" lon="-1.42791">
+  <name>S28</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.71160,-1.43333 to 50.71545,-1.42245 OR from SZ401037 to SZ408080 - it is 0.56M or 0.901K long</desc>
+</wpt>
+<wpt lat="50.71934" lon="-1.41844">
+  <name>S3</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.71898,-1.41358 to 50.72006,-1.43522 OR from SZ414120 to SZ399131 - it is 1.614M or 2.598K long</desc>
+</wpt>
+<wpt lat="50.71907" lon="-1.43601">
+  <name>S32</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.72006,-1.43522 to 50.71860,-1.43605 OR from SZ399131 to SZ399114 - it is 0.12M or 0.193K long</desc>
+</wpt>
+<wpt lat="50.71796" lon="-1.43471">
+  <name>S30</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.71860,-1.43605 to 50.71733,-1.43420 OR from SZ399114 to SZ400100 - it is 0.127M or 0.204K long</desc>
+</wpt>
+<wpt lat="50.71777" lon="-1.43366">
+  <name>S31</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.71733,-1.43420 to 50.71830,-1.43332 OR from SZ400100 to SZ401111 - it is 0.081M or 0.131K long</desc>
+</wpt>
+<wpt lat="50.71714" lon="-1.42899">
+  <name>S5</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.71830,-1.43332 to 50.71545,-1.42245 OR from SZ401111 to SZ408080 - it is 0.588M or 0.946K long</desc>
+</wpt>
+<wpt lat="50.70263" lon="-1.43153">
+  <name>S27</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.70426,-1.43061 to 50.70038,-1.43118 OR from SZ403955 to SZ402912 - it is 0.281M or 0.453K long</desc>
+</wpt>
+<wpt lat="50.70529" lon="-1.43374">
+  <name>S10</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.70761,-1.43300 to 50.70357,-1.43598 OR from SZ401992 to SZ399947 - it is 0.333M or 0.536K long</desc>
+</wpt>
+<wpt lat="50.70403" lon="-1.42905">
+  <name>S11</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.70126,-1.42667 to 50.70426,-1.43061 OR from SZ405922 to SZ403955 - it is 0.334M or 0.537K long</desc>
+</wpt>
+<wpt lat="50.70543" lon="-1.43767">
+  <name>S9</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.70688,-1.43891 to 50.70357,-1.43598 OR from SZ397984 to SZ399947 - it is 0.272M or 0.438K long</desc>
+</wpt>
+<wpt lat="50.70821" lon="-1.41429">
+  <name>S12</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.70435,-1.41365 to 50.71234,-1.41375 OR from SZ415957 to SZ414046 - it is 0.568M or 0.914K long</desc>
+</wpt>
+<wpt lat="50.7177" lon="-1.43789">
+  <name>S1</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.71694,-1.43999 to 50.71860,-1.43605 OR from SZ396096 to SZ399114 - it is 0.209M or 0.336K long</desc>
+</wpt>
+<wpt lat="50.71599" lon="-1.44193">
+  <name>S1</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.71598,-1.44226 to 50.71694,-1.43999 OR from SZ394085 to SZ396096 - it is 0.124M or 0.2K long</desc>
+</wpt>
+<wpt lat="50.71417" lon="-1.43369">
+  <name>S27</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.71733,-1.43420 to 50.71160,-1.43333 OR from SZ400100 to SZ401037 - it is 0.398M or 0.641K long</desc>
+</wpt>
+<wpt lat="50.71104" lon="-1.4333">
+  <name>S27</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.71160,-1.43333 to 50.71029,-1.43328 OR from SZ401037 to SZ401022 - it is 0.091M or 0.146K long</desc>
+</wpt>
+<wpt lat="50.71605" lon="-1.41769">
+  <name>S28</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.71545,-1.42245 to 50.71898,-1.41358 OR from SZ408080 to SZ414120 - it is 0.485M or 0.781K long</desc>
+</wpt>
+<wpt lat="50.71898" lon="-1.41358">
+  <name>S28</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.71898,-1.41358 to 50.71928,-1.41319 OR from SZ414120 to SZ415123 - it is 0.027M or 0.043K long</desc>
+</wpt>
+<wpt lat="50.69283" lon="-1.451">
+  <name>S8</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.69169,-1.45204 to 50.69514,-1.45010 OR from SZ388814 to SZ389853 - it is 0.257M or 0.414K long</desc>
+</wpt>
+<wpt lat="50.70305" lon="-1.43556">
+  <name>S9</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.70357,-1.43598 to 50.70071,-1.43400 OR from SZ399947 to SZ400916 - it is 0.222M or 0.357K long</desc>
+</wpt>
+<wpt lat="50.70902" lon="-1.43322">
+  <name>S27</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.71029,-1.43328 to 50.70761,-1.43300 OR from SZ401022 to SZ401992 - it is 0.187M or 0.301K long</desc>
+</wpt>
+<wpt lat="50.70622" lon="-1.43195">
+  <name>S27</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.70761,-1.43300 to 50.70426,-1.43061 OR from SZ401992 to SZ403955 - it is 0.258M or 0.416K long</desc>
+</wpt>
+<wpt lat="50.68024" lon="-1.45572">
+  <name>S34</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.68038,-1.45973 to 50.68032,-1.45406 OR from SZ382688 to SZ386688 - it is 0.249M or 0.401K long</desc>
+</wpt>
+<wpt lat="50.67857" lon="-1.45987">
+  <name>S18</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.67857,-1.45987 to 50.68038,-1.45973 OR from SZ382668 to SZ382688 - it is 0.125M or 0.202K long</desc>
+</wpt>
+<wpt lat="50.68049" lon="-1.46295">
+  <name>S34</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.68047,-1.46318 to 50.68038,-1.45973 OR from SZ380689 to SZ382688 - it is 0.152M or 0.244K long</desc>
+</wpt>
+<wpt lat="50.68042" lon="-1.45094">
+  <name>S34</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.68032,-1.45406 to 50.67917,-1.44580 OR from SZ386688 to SZ392675 - it is 0.379M or 0.61K long</desc>
+</wpt>
+<wpt lat="50.6743" lon="-1.43095">
+  <name>S24</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.67467,-1.43250 to 50.67386,-1.42917 OR from SZ401626 to SZ404617 - it is 0.157M or 0.253K long</desc>
+</wpt>
+<wpt lat="50.66183" lon="-1.43923">
+  <name>S39</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.66079,-1.43671 to 50.66307,-1.44050 OR from SZ399471 to SZ396497 - it is 0.236M or 0.38K long</desc>
+</wpt>
+<wpt lat="50.70863" lon="-1.47209">
+  <name>S38</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.70927,-1.47194 to 50.70804,-1.47199 OR from SZ373009 to SZ373995 - it is 0.086M or 0.138K long</desc>
+</wpt>
+<wpt lat="50.70634" lon="-1.47154">
+  <name>S44</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.70517,-1.47176 to 50.70805,-1.47200 OR from SZ373963 to SZ373995 - it is 0.202M or 0.326K long</desc>
+</wpt>
+<wpt lat="50.70738" lon="-1.47491">
+  <name>S43</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.70606,-1.47559 to 50.70845,-1.47439 OR from SZ371973 to SZ372000 - it is 0.173M or 0.279K long</desc>
+</wpt>
+<wpt lat="50.70845" lon="-1.47439">
+  <name>S37</name>
+  <cmt>S</cmt>
+  <desc>Footpath from 50.70845,-1.47439 to 50.70894,-1.47556 OR from SZ372000 to SZ371005 - it is 0.061M or 0.099K long</desc>
+</wpt>
+</gpx>

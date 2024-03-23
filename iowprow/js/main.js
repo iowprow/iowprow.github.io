@@ -160,7 +160,7 @@ map.on("load", async () => {
   const data = await response.json();
   map.addSource("allgeo", {
     type: "geojson",
-    data: "../data/combined.geojson",
+    data: "data/combined.geojson",
     attribution: "PROW Data provided by the Isle of Wight Council",
   });
   map.addSource("parishes", {

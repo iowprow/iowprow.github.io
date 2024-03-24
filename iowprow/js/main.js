@@ -1,3 +1,12 @@
+/*
+Thanks to Barry Cornelius for providing council path data as JSON via rowmaps, and to Robert Whittaker for clarifying which councils offer path data as OGL.
+
+David Groom FOI request  https://www.whatdotheyknow.com/request/digitised_version_of_definitive
+
+The data we use is an interpretation of the definitive map, not a accurate reproduction, so it cannot be used for legal purposes and is provided without warranty or guarantee.
+
+*/
+
 function toggleSidebar() {
   const sidebarMenu = document.getElementById("sidebarList");
   sidebarMenu.classList.toggle("hidden");
@@ -148,6 +157,15 @@ map.on("load", async () => {
     "bottom-left"
   );
   map.addControl(new maplibregl.FullscreenControl());
+  // Add geolocate control to the map.
+  map.addControl(
+    new maplibregl.GeolocateControl({
+      positionOptions: {
+        enableHighAccuracy: true
+      },
+      trackUserLocation: true
+    })
+  );
   map.addControl(
     new maplibregl.AttributionControl({
       compact: true,

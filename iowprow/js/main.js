@@ -100,13 +100,6 @@ const rowTextStyle = {
   "text-halo-width": 4,
 };
 
-const circleRadius = 0.25; // quarter kilometer
-var circleOptions = {
-  steps: 64,
-  units: "kilometers",
-  //  properties: {foo: 'bar'},
-};
-
 const layerIDs = []; // Will contain a list used to filter against.
 const layerRowTypes = []; // Will contain a list used to filter against.
 const labelLayerIDs = [];
@@ -140,7 +133,7 @@ const map = new maplibregl.Map({
   hash: false,
   center: center,
   zoom: startZoom,
-  maxZoom: 16,
+  maxZoom: 18,
   minZoom: 10,
   cooperativeGestures: true, //two fingers to move the map
 });
@@ -158,14 +151,14 @@ map.on("load", async () => {
   );
   map.addControl(new maplibregl.FullscreenControl());
   // Add geolocate control to the map.
-  map.addControl(
-    new maplibregl.GeolocateControl({
-      positionOptions: {
-        enableHighAccuracy: true
-      },
-      trackUserLocation: true
-    })
-  );
+  // map.addControl(
+  //  new maplibregl.GeolocateControl({
+  //    positionOptions: {
+  //      enableHighAccuracy: true
+  //    },
+  //    trackUserLocation: true
+  // })
+  // );
   map.addControl(
     new maplibregl.AttributionControl({
       compact: true,
@@ -190,6 +183,12 @@ map.on("load", async () => {
   addDataToAutocomplete(data);
 
   document.getElementById("btn-home").addEventListener("click", () => {
+    if (map.getLayer("locationLine")) {
+      map.removeLayer("locationLine");
+    }
+    if (map.getSource("locationLine")) {
+      map.removeSource("locationLine");
+    }
     map.flyTo({
       center: center,
       zoom: startZoom,
@@ -197,11 +196,11 @@ map.on("load", async () => {
   });
   // if cancel cross selected in search clear circle off map and go to start
   document.getElementById("query").addEventListener("search", function (event) {
-    if (map.getLayer("locationCircle")) {
-      map.removeLayer("locationCircle");
+    if (map.getLayer("locationLine")) {
+      map.removeLayer("locationLine");
     }
-    if (map.getSource("locationCircle")) {
-      map.removeSource("locationCircle");
+    if (map.getSource("locationLine")) {
+      map.removeSource("locationLine");
     }
     map.flyTo({
       center: center,
@@ -270,6 +269,7 @@ function byParish(data) {
           },
           "text-justify": "center",
           "text-allow-overlap": true,
+          "text-ignore-placement": true,
           "text-letter-spacing": 0.05,
           "text-offset": [0, 1],
           "text-font": ["Roboto Medium Regular"],
@@ -395,6 +395,7 @@ function addDataToAutocomplete(data) {
             properties: props,
             id: k,
             coord: geom.coordinates[0][0],
+            lineCoord: geom.coordinates[0],
           });
         }
       });
@@ -404,6 +405,7 @@ function addDataToAutocomplete(data) {
       $("#query").val(ui.item.label);
       $("#query").val(ui.item.value);
       $("#path-coords").val(ui.item.coord);
+      $("#line-coords").val(ui.item.lineCoord);
     },
     response: function (event, ui) {
       if (!ui.content.length) {
@@ -413,33 +415,46 @@ function addDataToAutocomplete(data) {
     },
   });
   $("#query").on("autocompleteselect", function (event, ui) {
-    if (map.getLayer("locationCircle")) {
-      map.removeLayer("locationCircle");
+    if (map.getLayer("locationLine")) {
+      map.removeLayer("locationLine");
     }
-    if (map.getSource("locationCircle")) {
-      map.removeSource("locationCircle");
+    if (map.getSource("locationLine")) {
+      map.removeSource("locationLine");
     }
 
-    pathSelect(ui.item.value, ui.item.coord);
+    pathSelect(ui.item.value, ui.item.coord, ui.item.lineCoord);
     ui.item.value = ui.item.value;
   });
 }
 
-function pathSelect(value, coord) {
+function pathSelect(value, coord, lineCoord) {
   if (value != "") {
-    circle = turf.circle(coord, circleRadius, circleOptions);
+    linestring = turf.lineString(lineCoord);
+    var length = turf.length(linestring, { units: 'miles' });
+    var halfLength = length / 2;
+    var options = { units: 'miles' };
+    var ctrPt = turf.along(linestring, halfLength, options);
     map.addLayer({
-      id: "locationCircle",
-      type: "fill",
+      id: "locationLine",
+      type: "line",
       source: {
         type: "geojson",
-        data: circle,
+        data: linestring,
       },
       paint: {
-        "fill-color": "steelblue",
-        "fill-opacity": 0.2,
+        "line-width": 4,
+        "line-color": "yellow",
+        "line-gap-width": 4,
+        "line-opacity": 0.7,
       },
     });
+
+    //  new maplibregl.Popup()
+    //    .setLngLat(ctrPt.geometry.coordinates)
+    //  .setHTML(value + " Length: <br/>" + length + " mi")
+    //
+    //  .addTo(map);
+
     map.flyTo({
       center: coord,
       zoom: 15,

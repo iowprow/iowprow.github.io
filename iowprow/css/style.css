@@ -323,3 +323,23 @@ button#sendgSheet {
     transform: rotate(1turn);
   }
 }
+
+#previewBox {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(4, max-content);
+  gap: 8px;
+}
+
+.preview {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+  height: 150px;
+}
+
+img.preview {
+  max-width: 100%;
+  object-fit: contain;
+}

@@ -431,6 +431,7 @@ function createSidebarDiv(layerID, labelLayerID, textContent, appendParent, inpu
 }
 
 function addDataToAutocomplete(data) {
+    const collator = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });
     data.features.sort(function (a, b) {
         const nameA =
             typeof a["properties"]["Name"] === "string"
@@ -440,13 +441,7 @@ function addDataToAutocomplete(data) {
             typeof b["properties"]["Name"] === "string"
                 ? b["properties"]["Name"].toUpperCase()
                 : b["properties"]["Name"];
-        let comparison = 0;
-        if (nameA < nameB) {
-            comparison = -1;
-        } else if (nameA > nameB) {
-            comparison = 1;
-        }
-        return comparison; //default return value (no sorting)
+        return collator.compare(nameA, nameB);
     });
     $("#query").autocomplete({
         source: function (request, response) {

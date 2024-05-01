@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IOW Public Rights of Way</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+    <script src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https:////cdn.datatables.net/2.0.5/css/dataTables.dataTables.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500');
+
+        td:hover {
+            color: #FB667A;
+            font-weight: bold;
+            transition-delay: 0s;
+            transition-duration: 0.4s;
+            transition-property: all;
+            transition-timing-function: line;
+        }
+
+        h1 {
+            position: relative;
+            padding: 0;
+            margin: 10;
+            font-family: "Raleway", sans-serif;
+            font-weight: 400;
+            font-size: 40px;
+            color: white;
+            -webkit-transition: all 0.4s ease 0s;
+            -o-transition: all 0.4s ease 0s;
+            transition: all 0.4s ease 0s;
+        }
+
+        .table {
+            width: 100%;
+
+            thead {
+                th {
+                    padding: 10px 10px;
+                    background: #00adee;
+                    font-size: 25px;
+                    text-transform: uppercase;
+                    vertical-align: top;
+                    color: #1D4A5A;
+                    font-weight: normal;
+                    text-align: left;
+                }
+            }
+
+            tbody {
+                tr {
+                    td {
+                        padding: 10px;
+                        background: #f2f2f2;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .add {
+            outline: none;
+            background: none;
+            border: none;
+        }
+
+        .edit {
+            outline: none;
+            background: none;
+            border: none;
+        }
+
+        .save {
+            outline: none;
+            background: none;
+            border: none;
+        }
+
+        .delete {
+            outline: none;
+            background: none;
+            border: none;
+        }
+
+        .edit {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .save {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .delete {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .add {
+            float: left;
+            border: 1px solid black;
+            color: white;
+            font-size: 13px;
+            padding: 0;
+            padding: 3px 5px;
+            margin-top: 5px;
+            cursor: pointer;
+            background: #32AD60;
+
+            &:hover {
+                background: #ffffff;
+                color: #00adee;
+            }
+        }
+
+        .save {
+            display: none;
+            background: #32AD60;
+            color: #ffffff;
+
+            &:hover {
+                background: darken(#32AD60, 10%);
+            }
+        }
+
+        .edit {
+            background: #2199e8;
+            color: #ffffff;
+
+            &:hover {
+                background: darken(#2199e8, 10%);
+            }
+        }
+
+        .delete {
+            background: #EC5840;
+            color: #ffffff;
+
+            &:hover {
+                background: darken(#EC5840, 10%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <body>
+        <div class="wrapper" id="page">
+            <header class="grid-item header">
+                <div class="grid-item nested-header-grid">
+                    <label class="hamburger-menu">
+                        <input type="checkbox" id="myCheck" onclick="toggleSidebar()" />
+                    </label>
+                    <button id="btn-home" type="button"></button>
+                    <button id="btn-login" type="button"></button>
+                    <div id="userMenuContainer">
+                        <ul id="menuDropdown">
+                            <li><a href="index.html">Map</a></li>
+                            <li><a id="signOutBtn" href="javascript:void(0)">Sign out</a></li>
+                        </ul>
+                    </div>
+                    <button id="btn-screenshot" type="button" class="btn btn-primary btn-screenshot" onclick="takeScreenshot(event);"></button>
+                    <div class="search-box">
+                        <div class="search-box-inner">
+                            <form id="search" onsubmit="return false">
+                                <input id="query" type="search" placeholder="Enter Path Number eg. A36" />
+                                <input type="hidden" id="path-coords" />
+                                <input type="hidden" id="line-coords" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="grid-item main">
+                <div id="notes">
+                    <table id="notesTable" class="display compact"></table>
+                </div>
+                <div id="addNotesModal" class="hidden">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <p>Add your notes about the path status</p>
+                        <form id="addNotesForm">
+                            <label for="userEmail"> Email:</label>
+                            <input type="text" id="userEmail" name="userEmail" value="" readonly><br />
+                            <label for="pathName">Path Name:</label>
+                            <input type="text" id="pathName" name="pathName" value=""><br />
+                            <label for="pathNote">Path Note:</label>
+                            <input type="text" id="pathNote" name="pathNote" placeholder="Add Note"><br />
+                            <input type="hidden" value="" name="parish" id="parish" />
+                            <input type="hidden" value="" name="pathUnique_id" id="pathUnique_id" />
+                            <input type="hidden" value="" name="fileCount" id="fileCount">
+                            <input type="file" id="attach" name="attach" multiple /><br />
+                            <div id="previewBox"></div>
+                            <button type="submit" id="addNotes"><span class="loader">Send</span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal" id="imageModal">
+                <span class="close">&times;</span>
+                <div class="imageContainer"><img class="popupSrc" src="" width="107" height="98"></div>
+            </div>
+
+            <div class="grid-item sidebar" id="sidebarPanel">
+                <div class="subrow hidden" id="sidebarList">
+                    <div class="grid-item" id="ckboxes">
+                        <div id="prow-legend" class="legend">
+                            <div id="legend-title">Legend</div>
+                        </div>
+                    </div>
+                    <div class="grid-item" id="mapFilter">
+                        <div id="filter-title">Parish PROW</div>
+                        <input type="button" onclick="checkUncheck('allOn')" value="Check All" />
+                        <input type="button" onclick="checkUncheck('allOff')" value="Uncheck All" />
+                        <nav id="filter-parish" class="filter-parish"></nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-item footer">
+                <small>&#169;
+                    <script type="text/JavaScript">
+            var theDate=new Date(); document.write(theDate.getFullYear())
+          </script>
+                    iowprow
+                </small>
+                <div id="date-updated"></div>
+                <div class="right">Ramblers PROW Management</div>
+            </div>
+        </div>
+
+
+        <script type="module" src="js/app2.js"></script>
+
+
+    </body>
+</html>

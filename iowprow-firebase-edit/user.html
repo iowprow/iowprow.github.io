@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IOW Public Rights of Way</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <form id="adminUser">
+        <fieldset>
+            <legend>Add your path notes</legend>
+            <label for="uploadEmail"> Email:</label>
+            <input type="text" id="uploadEmail" name="uploadEmail" value="" readonly><br />
+            <label for="pathName">Path Name:</label>
+            <input type="text" id="pathName" name="pathName" value="" readonly><br />
+            <label for="pathNote">Path Note:</label>
+            <input type="text" id="pathNote" name="pathNote" placeholder="Add Note"><br />
+            <input type="hidden" value="" name="parish" id="parish" />
+            <input type="hidden" value="" name="pathUnique_id" id="pathUnique_id" />
+            <input type="hidden" value="" name="fileCount" id="fileCount">
+            <input type="file" id="attach" name="attach" multiple /><br />
+            <div id="previewBox"></div>
+            <button type="submit" id="uploadNotes"><span class="loader">Send</span></button>
+        </fieldset>
+    </form>
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js'
+        import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js'
+
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDlaJMTgnI601KqJqOZ_836rtdkDSRyNgs",
+            authDomain: "iowprow-2024.firebaseapp.com",
+            projectId: "iowprow-2024",
+            storageBucket: "iowprow-2024.appspot.com",
+            messagingSenderId: "462103683028",
+            appId: "1:462103683028:web:5f25e8fa866d49eac98041"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+    </script>
+</body>
+</html>

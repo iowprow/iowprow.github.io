@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IOW Public Rights of Way</title>
+
+    <script type="text/javascript" src="//unpkg.com/maplibre-gl@3.2.1/dist/maplibre-gl.js"></script>
+    <link href="//unpkg.com/maplibre-gl@3.2.1/dist/maplibre-gl.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="js/html2canvas.min.js"></script>
+    <script type="text/javascript" src="js/resetMapControl.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper" id="page">
+        <header class="grid-item header">
+            <div class="grid-item nested-header-grid">
+                <label class="hamburger-menu">
+                    <input type="checkbox" id="myCheck" onclick="toggleSidebar()" />
+                </label>
+                <button id="btn-login" type="button"></button>
+                <div id="userMenuContainer">
+                    <ul id="menuDropdown">
+                        <li><a href="view-notes.html">View notes</a></li>
+                        <li><a id="signOutBtn" href="javascript:void(0)">Sign out</a></li>
+                    </ul>
+                </div>
+                <button id="btn-screenshot" type="button" class="btn btn-primary btn-screenshot" onclick="takeScreenshot(event);"></button>
+                <div class="search-box">
+                    <div class="search-box-inner">
+                        <form id="search" onsubmit="return false">
+                            <input id="query" type="search" placeholder="Enter Path Number eg. A36" />
+                            <input type="hidden" id="path-coords" />
+                            <input type="hidden" id="line-coords" />
+                        </form>
+                    </div>
+                </div>
+                <div id="signedOnAs" class="hidden"></div>
+            </div>
+        </header>
+
+        <div class="grid-item main">
+            <div id="map" class="map-content"></div>
+        </div>
+
+        <div class="grid-item sidebar" id="sidebarPanel">
+            <div class="subrow hidden" id="sidebarList">
+                <div class="grid-item" id="ckboxes">
+                    <div id="prow-legend" class="legend">
+                        <div id="legend-title">Legend</div>
+                    </div>
+                </div>
+                <div class="grid-item" id="mapFilter">
+                    <div id="filter-title">Parish PROW</div>
+
+                    <label class="switch">
+                        <input type="checkbox" id="showAll" checked>
+                        <span class="slider round"></span>
+                    </label>
+
+                    <nav id="filter-parish" class="filter-parish"></nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item footer">
+            <small>&#169;
+                <script type="text/JavaScript">
+            var theDate=new Date(); document.write(theDate.getFullYear())
+          </script>
+                iowprow
+            </small>
+            <div id="date-updated"></div>
+            <div class="right">Ramblers PROW Management</div>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="formModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="uploadNotesForm">
+                <fieldset>
+                    <legend>Add your path notes</legend>
+                    <label for="uploadEmail"> Email:</label>
+                    <input type="text" id="uploadEmail" name="uploadEmail" value="" readonly><br />
+                    <label for="pathName">Path Name:</label>
+                    <input type="text" id="pathName" name="pathName" value="" readonly><br />
+                    <label for="pathNote">Path Note:</label>
+                    <input type="text" id="pathNote" name="pathNote" placeholder="Add Note"><br />
+                    <input type="hidden" value="" name="parish" id="parish" />
+                    <input type="hidden" value="" name="pathUnique_id" id="pathUnique_id" />
+                    <input type="hidden" value="" name="fileCount" id="fileCount">
+                    <input type="file" id="attach" name="attach" multiple /><br />
+                    <div id="previewBox"></div>
+                    <button type="submit" id="uploadNotes"><span class="loader">Send</span></button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="loginModal">
+        <div id="loginContainer">
+            <div id="spinner"></div>
+            <div id="loginMessage"></div>
+            <input type="email" placeholder="Email" id="loginEmail">
+            <input type="password" placeholder="Password" id="password"> <br><br>
+            <div class="btn-container">
+                <button class="btn" id="signInBtn">Sign In</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

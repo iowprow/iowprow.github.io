@@ -1,0 +1,25 @@
+<header class="grid-item header">
+    <div class="grid-item nested-header-grid header">
+        <label class="hamburger-menu">
+            <input type="checkbox" id="myCheck" onclick="toggleSidebar()" />
+        </label>
+        <button id="btn-home" type="button"></button>
+        <button id="btn-login" type="button"></button>
+        <div id="userMenuContainer">
+            <ul id="menuDropdown">
+                <li><a href="view-notes.html">View notes</a></li>
+                <li><a id="signOutBtn" href="javascript:void(0)">Sign out</a></li>
+            </ul>
+        </div>
+        <button id="btn-screenshot" type="button" class="btn btn-primary btn-screenshot" onclick="takeScreenshot(event);"></button>
+        <div class="search-box">
+            <div class="search-box-inner">
+                <form id="search" onsubmit="return false">
+                    <input id="query" type="search" placeholder="Enter Path Number eg. A36" />
+                    <input type="hidden" id="path-coords" />
+                    <input type="hidden" id="line-coords" />
+                </form>
+            </div>
+        </div>
+    </div>
+</header>

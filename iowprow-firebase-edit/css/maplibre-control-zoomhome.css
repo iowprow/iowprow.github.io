@@ -1,0 +1,18 @@
+.maplibre-control-zoomhome {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.maplibre-control-zoomhome button img {
+  width: 45px;
+  position: relative;
+  top: -7px;
+  left: -7px;
+}
+
+.maplibre-control-zoomhome button:focus {
+  outline: 2px solid black;
+  border-radius: 3px;
+  box-shadow: none !important;
+}

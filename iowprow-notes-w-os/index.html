@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <title>IOW PROW Notes</title>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript" src="//unpkg.com/maplibre-gl@4.3.1/dist/maplibre-gl.js"></script>
+    <link href="//unpkg.com/maplibre-gl@4.3.1/dist/maplibre-gl.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/resetMapControl.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.js"></script>
+
+    <script src="./js/footer.js"></script>
+    <script src="./js/sidebar.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100dvh;
+        }
+
+        /* header */
+        header {
+            background-color: #fed330;
+            padding: 10px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #headerLeft {
+            display: flex;
+            align-items: left;
+        }
+
+        #headerRight {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #headerRight div {
+            margin-left: 3px;
+        }
+
+        .search-box {
+            z-index: 9999;
+        }
+
+        .search-box-inner {
+            background-color: #fff;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            padding: 2px;
+        }
+
+        .search-box-inner div {
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .search-box-inner input[type="search"] {
+            width: 188px;
+        }
+
+        /* END header */
+
+        /* main */
+        main {
+            flex: 1;
+            overflow: auto;
+            background-color: #aad3df;
+        }
+
+        #map {
+            height: 100%;
+        }
+
+        .maplibregl-ctrl-reset {
+            display: block;
+            padding: 0.2em;
+            background-image: url("css/home.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 30px;
+            height: 30px;
+        }
+
+        .prow-popup {
+            max-width: 400px;
+            font: 12px/18px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        }
+
+
+        .marker {
+
+            width: 12px;
+            height: 12px;
+            border: 1px solid black;
+            border-radius: 50%;
+            margin: auto;
+            background: yellow;
+            cursor: pointer;
+        }
+
+        /* end main */
+        /* modal dialogs */
+        dialog {
+            margin: 40px auto;
+            padding: 1em;
+        }
+
+        ::backdrop {
+            background-image: linear-gradient(to top,
+                    #797c7a,
+                    #7c8880,
+                    #7e9487,
+                    #7fa18f,
+                    #7fad97,
+                    #82b7a1,
+                    #84c1ab,
+                    #86cbb5,
+                    #8dd5c3,
+                    #94dfd1,
+                    #9be8df,
+                    #a4f2ed);
+            opacity: 0.75;
+        }
+
+        /* end modal dialogs */
+    </style>
+</head>
+
+<body>
+
+
+    <header class="site-header">
+        <div id="headerLeft">IOW PROW</div>
+        <div id="headerRight">
+            <div class="search-box">
+                <div class="search-box-inner">
+                    <form id="search" onsubmit="return false">
+                        <input id="query" type="search" placeholder="Path Number eg. A36" />
+                        <input type="radio" name="searchBy" id="searchBypathname" value="searchBypathname" checked> <label for="searchBypathname">Path Name</label>
+                        <input type="radio" name="searchBy" id="searchByosgrid" value="searchByosgrid"> <label for="searchByosgrid">OS Grid</label>
+                        <input type="hidden" id="path-coords" />
+                        <input type="hidden" id="line-coords" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <dialog-component></dialog-component>
+
+    <main>
+        <div id="map">
+            <sidebar-component showMenu="legend"></sidebar-component>
+        </div>
+
+    </main>
+
+    <footer-component></footer-component>
+
+    <script type="module">
+        import { prowMapConstants, map, osm, resetMap, getLegendEvents, parishBoundaries, byParish, buildPopupHtml, getUniqueFeatures } from "./js/map.js";
+
+        map.addControl(
+            new ResetMapControl({ resetLngLat: prowMapConstants.center, resetZoom: prowMapConstants.startZoom }),
+            "top-right"
+        );
+        map.addControl(new maplibregl.NavigationControl({
+            showCompass: false
+        }), "top-right");
+
+        map.addControl(new maplibregl.ScaleControl({
+            maxWidth: 80, unit: "imperial"
+        }), "bottom-left");
+
+        map.addControl(new maplibregl.FullscreenControl());
+
+        map.addControl(new maplibregl.AttributionControl({
+            compact: true
+        }))
+
+        // disable map rotation using right click + drag
+        map.dragRotate.disable();
+
+        // disable map rotation using touch rotation gesture
+        map.touchZoomRotate.disableRotation();
+
+        /* ================= load =====================*/
+        map.on("load", async () => {
+            const combinedGeojson = await fetch(`${prowMapConstants.combinedGeojsonFile}`);
+            const combinedProwData = await combinedGeojson.json();
+            const combinedParishBoundariesData = prowMapConstants.parishesGeojsonFile;
+
+            map.addSource("allgeo", {
+                type: "geojson",
+                data: combinedProwData,
+                attribution: "PROW Data provided by the Isle of Wight Council",
+                generateId: true,
+                tolerance: 0.00001
+            });
+
+            map.addSource("parishBoundaries", {
+                type: "geojson",
+                data: combinedParishBoundariesData,
+            });
+
+            parishBoundaries();
+            byParish(combinedProwData);
+            // prepare search box with path name data for default autocomplete
+            addDataToAutocomplete(combinedProwData);
+
+            //option to change to grid search
+            const searchByradios = document.querySelectorAll('input[name="searchBy"]');
+            searchByradios.forEach(radio => {
+                radio.addEventListener('click', function () {
+                    if (radio.value == 'searchByosgrid') {
+                        document.getElementById("query").placeholder = "OS grid eg. SZ 56323 77320";
+                        document.getElementById("query").value = "";
+                        searchBy(radio.value, "");
+                    } else {
+                        document.getElementById("query").placeholder = "Path Number eg. A36";
+                        document.getElementById("query").value = "";
+                        searchBy(radio.value, combinedProwData);
+                    }
+                });
+            });
+
+            document.querySelector(".maplibregl-ctrl-reset").addEventListener("click", () => {
+                resetMap();
+            });
+            console.log("map is loaded");
+        });
+        /* ================= end load =====================*/
+
+        import { addDataToAutocomplete, searchBy } from "./js/search.js";
+
+        map.on('click', (e) => {
+            // Set `bbox` as 5px rectangle area around clicked point.
+            const bbox = [
+                [e.point.x - 5, e.point.y - 5],
+                [e.point.x + 5, e.point.y + 5]
+            ];
+
+            // Find features intersecting the bounding box.
+            const selectedFeatures = map.queryRenderedFeatures(bbox, {
+                filter: ['has', 'PARISH']
+            });
+
+            if (!selectedFeatures.length > 0) { return; }
+
+            if (selectedFeatures) {
+                const uniqueFeatures = getUniqueFeatures(selectedFeatures, 'Name');
+                // Populate features for the listing overlay.
+
+                console.log(uniqueFeatures);
+                buildPopupHtml(e.lngLat, uniqueFeatures);
+            }
+        });
+        /* ================= end click =====================*/
+
+        const leftSidebarArrow = document.getElementById('leftSidebar');
+        const whichMenu = document.querySelector('sidebar-component').getAttribute("showMenu");
+        leftSidebarArrow.addEventListener('click', () => {
+            toggleSidebar('left');
+        });
+
+        function toggleSidebar(id) {
+            console.log("toggle " + id);
+            const elem = document.getElementById(id);
+            const classes = elem.className.split(' ');
+            const collapsed = classes.indexOf('collapsed') !== -1;
+            const childArrow = elem.querySelector(".sidebar-toggle");
+            const padding = {};
+            if (collapsed) {
+                // Remove the 'collapsed' class from the class list of the element, this sets it back to the expanded state.
+                classes.splice(classes.indexOf('collapsed'), 1);
+                padding[id] = 200; // In px, matches the width of the sidebars set in .sidebar CSS class
+                map.easeTo({
+                    padding,
+                    duration: 1000 // In ms, CSS transition duration property for the sidebar matches this value
+                });
+                if (id == "left") {
+                    childArrow.innerHTML = "&larr;";
+                }
+                if (whichMenu === 'legend') {
+                    getLegendEvents();
+                }
+            } else {
+                padding[id] = 0;
+                // Add the 'collapsed' class to the class list of the element
+                classes.push('collapsed');
+                if (id == "left") {
+                    childArrow.innerHTML = "&rarr;";
+                }
+                map.easeTo({
+                    padding,
+                    duration: 1000
+                });
+            }
+            // Update the class list on the element
+            elem.className = classes.join(' ');
+        }
+    </script>
+</body>
+</html>

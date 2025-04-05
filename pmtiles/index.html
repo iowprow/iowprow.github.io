@@ -40,18 +40,20 @@
 					  map.addControl(new maplibregl.NavigationControl());
 					  // The little line in the bottom showing how long a metre (or somesuch) is on
 					  // the map.
-					  map.addControl(new maplibregl.ScaleControl({ unit: "metric" }));
-					  // Button to make the map fullscreen
-					  map.addControl(new maplibregl.FullscreenControl());
+					map.addControl(new maplibregl.ScaleControl({ unit: "metric" }));
+					// Button to make the map fullscreen
+					map.addControl(new maplibregl.FullscreenControl());
 					  
-					  map.dragRotate.disable(); // Disable map rotation using right click + drag.
-						map.touchZoomRotate.disableRotation(); // Disable map rotation using touch rotation gesture.
+					map.dragRotate.disable(); // Disable map rotation using right click + drag.
+					map.touchZoomRotate.disableRotation(); // Disable map rotation using touch rotation gesture.
 
 					// Add navigation control (excluding compass button) to the map.
 					map.addControl(new maplibregl.NavigationControl({showCompass: true}));
 		
 		
-		
+					// Add geolocate control to the map.
+					map.addControl(new maplibregl.GeolocateControl({positionOptions: {enableHighAccuracy: true},trackUserLocation: true}));
+
   
 					map.addSource('iow-prow', {
 						type: 'vector',

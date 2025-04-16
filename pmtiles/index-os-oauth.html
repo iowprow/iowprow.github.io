@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IOW PROW</title>
+	<link rel='stylesheet' href='https://unpkg.com/maplibre-gl@5.3.1/dist/maplibre-gl.css' crossorigin="anonymous"/>
+    <script src='https://unpkg.com/maplibre-gl@5.3.1/dist/maplibre-gl.js' crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/pmtiles@4.3.0/dist/pmtiles.js"></script>
+    <style>
+		body { margin: 0; padding: 0; }
+        html, body { height: 100%; }
+    <!--    #map { height:calc(100% - 50px); width:100%; } -->
+	
+	#map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+	
+	.map-overlay {
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        position: absolute;
+        width: 150px;
+        top: 0;
+        right: 40px;
+        padding: 10px;
+    }
+	
+	.map-overlay2 {
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        position: absolute;
+        width: 150px;
+        top: 0;
+        left: 40px;
+        padding: 10px;
+    }
+
+    .map-overlay .map-overlay-inner {
+        background-color: #fff;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    .map-overlay-inner fieldset {
+        border: none;
+        padding: 0;
+        margin: 0 0 10px;
+    }
+
+    .map-overlay-inner fieldset:last-child {
+        margin: 0;
+    }
+
+    .map-overlay-inner select {
+        width: 100%;
+		font-size: 12px;
+    }
+
+    .map-overlay-inner legend {
+        display: block;
+        font-weight: bold;
+        margin: 0 0 2px;
+    }
+
+    .map-overlay-inner button {
+        display: inline-block;
+        width: 36px;
+        height: 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .map-overlay-inner button:focus {
+        outline: none;
+    }
+
+    .map-overlay-inner button:hover {
+        box-shadow: inset 0 0 0 3px rgba(0, 0, 0, 0.1);
+    }
+	
+	#stylesMenu {
+		position: absolute;
+		background: #efefef;
+		padding: 10px;
+		font-family: 'Open Sans', sans-serif;
+	}
+			
+    </style>
+</head>
+<body>
+	<div id="map"></div>
+	<div class="map-overlay top"></div>
+<script>
+	let protocol = new pmtiles.Protocol();
+	maplibregl.addProtocol("pmtiles", protocol.tile);
+	const os_api_url = "https://osmap.kab-ventnor.workers.dev/token";
+	let accessToken;
+	const lineStyles = {
+		footpaths: {id: 'footpaths', title: 'Footpath', color: '#ff0000'}, 
+		bridleways: {id: 'bridleways', title: 'Bridleway', color: 'green'},
+		byways: {id: 'byways', title: 'Restricted Byway', color: 'yellow'},
+		boat: {id: 'boat', title: 'Byway open to all traffic', color: 'purple'},
+	}
+	const baseMapsStyles = [
+		{id: 'bright', title: 'Bright', styleUrl: 'https://tiles.openfreemap.org/styles/bright'}, 
+		{id: 'liberty', title: 'Liberty', styleUrl: 'https://tiles.openfreemap.org/styles/liberty'},
+		{id: 'colorful', title: 'Colorful', styleUrl: 'https://tiles.versatiles.org/assets/styles/colorful/style.json'},
+		{id: 'os', title: 'OS', styleUrl: 'https://api.os.uk/maps/vector/v1/vts/resources/styles'},
+	]
+		
+	function createDropDownList() {
+		
+		let parentDiv = document.querySelector(".map-overlay");
+		
+		let parentInnerDiv = document.createElement("DIV");
+		parentInnerDiv.className = "map-overlay-inner";
+
+		var newSection = document.createElement('fieldset');
+		var legend = document.createElement('legend');
+		legend.textContent = 'Select basemap';
+		
+		//Create a DropDownList element.
+        let stylesSelectList = document.createElement("SELECT");
+		stylesSelectList.id = "stylesDropDown";
+		stylesSelectList.className = "mapstyles-select";
+		
+		//Add the Options to the DropDownList.
+		for (var i = 0; i < baseMapsStyles.length; i++) {
+			var option = document.createElement("OPTION"); 
+			//Set basemap title in Text part.
+			option.innerHTML = baseMapsStyles[i].title;
+			//Set basemap styleurl in Value part.
+			option.value = baseMapsStyles[i].styleUrl;
+			//Add the Option element to DropDownList.
+			stylesSelectList.options.add(option);
+		}
+		newSection.appendChild(legend);  
+		newSection.appendChild(stylesSelectList);
+		parentInnerDiv.appendChild(newSection);
+		parentDiv.appendChild(parentInnerDiv);
+	}
+	
+	createDropDownList();
+			
+			
+	function getToken() {
+		return fetch(os_api_url)
+			.then(response => response.json())
+			.then(result => {
+				if( result.access_token ) {
+					// Store this token.
+					accessToken = result.access_token;
+
+					// Get a new token 30 seconds before this one expires.
+					const timeoutMS = (result.expires_in - 30) * 1000;
+					setTimeout(getToken, timeoutMS);
+				}
+				else {
+					// We failed to get the token.
+					return Promise.reject();
+				}
+			})
+			.catch(error => {
+				console.log('Got an error loading access token!');
+				return Promise.reject();
+			});
+	}
+	const map = new maplibregl.Map({
+		container: 'map',
+		minZoom: 9.5,
+		maxZoom: 18,
+		center: [-1.288, 50.669],
+		zoom: 10.35,
+		transformRequest: (url, resourceType) => {
+			// have to put this if statement in otherwise it add srs to pmtiles
+			if (url.startsWith("https://api.os.uk")) {
+				return {
+					headers: { 'Authorization': 'Bearer ' + accessToken },
+					url: url.split('?')[0] + '?srs=3857'
+				}
+			}
+		}
+	});
+	
+	const startUrl = baseMapsStyles[0].styleUrl;
+	document.getElementById("stylesDropDown").value = startUrl;
+	map.setStyle(startUrl);
+
+		function addAdditionalSourceAndLayer() {
+		
+			let mapStyle = map.getStyle();
+			var mapStyleSourcesNames = Object.keys(mapStyle.sources);
+			
+			//console.log(mapStyleSourcesNames);
+			
+			let font;
+			if (mapStyleSourcesNames.includes('esri')) {
+				font = 'Source Sans Pro Regular';
+			} else if (mapStyleSourcesNames.includes('versatiles-shortbread')) {
+				font = 'noto_sans_regular';
+			} else {
+				font = 'Noto Sans Regular';
+			}
+			
+			map.addSource('iowprow', {
+				type: 'vector',
+				url: "pmtiles://https://pmtiles.local.bouton.one/data/iowprow/pmtiles/iow-prow.pmtiles",
+			});
+			
+			map.addLayer({
+				id: 'footpaths',
+				source: 'iowprow',
+				'source-layer': 'footpaths',
+				type: 'line',
+				"paint": {
+					"line-color": lineStyles.footpaths.color,
+					"line-width": 2,
+				}
+			});
+			
+			map.addLayer({
+				id: 'bridleways',
+				source: 'iowprow',
+				'source-layer': 'bridleways',
+				type: 'line',
+				"paint": {
+					"line-color": lineStyles.bridleways.color,
+					"line-width": 2,
+				}
+			});
+			
+			map.addLayer({
+				id: 'byways',
+				source: 'iowprow',
+				'source-layer': 'byways',
+				type: 'line',
+				"paint": {
+					"line-color": lineStyles.byways.color,
+					"line-width": 2,
+				}
+			});
+			
+			map.addLayer({
+				id: 'boat',
+				source: 'iowprow',
+				'source-layer': 'boat',
+				type: 'line',
+				"paint": {
+					"line-color": lineStyles.boat.color,
+					"line-width": 2,
+				}
+			});
+			
+			
+			map.addSource('prowLabels', {
+				'type': 'geojson',
+				'data': 'https://pmtiles.local.bouton.one/data/iowprow/pmtiles/all-prow-labels-4326.geojson',
+			});
+			
+			
+			map.addLayer({
+				'id': 'poiLabels',
+				'type': 'symbol',
+				'source': 'prowLabels',
+				"minzoom": 13, // Set to the zoom level where labels should first appear
+				'layout': {
+				"text-size": {
+					"type": "interval",
+					"stops": [
+					  [13, 9], // Size at zoom level 13
+					  [14, 11], // Size at zoom level 14
+					  [15, 14]  // Size at zoom level 15
+					]
+				  },
+					'text-field': ['get', 'LabelText'],
+					'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+					'text-radial-offset': 0.5,
+					'text-justify': 'auto',
+					'text-font': [font],
+				},
+				'paint': {
+					'text-color': ['get', 'Color'],
+					'text-halo-color': '#fff',
+					'text-halo-width': 2,
+				}
+			});
+			
+		}
+		
+		map.on("load", async () => {
+			map.addControl(new maplibregl.ScaleControl({ unit: "metric" }));
+			map.addControl(new maplibregl.FullscreenControl());
+			map.addControl(new maplibregl.NavigationControl({showCompass: false}));
+			map.addControl(new maplibregl.GeolocateControl({positionOptions: {enableHighAccuracy: true},trackUserLocation: true}));
+
+			map.dragRotate.disable(); // Disable map rotation using right click + drag.
+			map.touchZoomRotate.disableRotation(); // Disable map rotation using touch rotation gesture.
+			
+		})
+		
+		map.on('style.load', () => {
+			addAdditionalSourceAndLayer();
+		});
+
+		document.querySelector('#stylesDropDown').addEventListener('change', (e) => {
+			let style_url = e.target.value;
+			if(style_url.includes('api.os.uk')) {
+				getToken().then(() => {
+					map.setStyle(style_url, {diff: false});
+				});
+			} else {
+				map.setStyle(style_url, {diff: false})
+			}
+		})
+</script>
+</body>
+</html>
